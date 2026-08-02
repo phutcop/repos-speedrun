@@ -1,0 +1,517 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   THEME TOKENS
+   Palette carried over from the portfolio theme:
+   periwinkle field + navy ink, editorial & quiet.
+========================= */
+:root {
+  --bg-main: #9eccfa;
+  --bg-card: #f7faff;
+  --bg-card-alt: #ffffff;
+  --text-main: #212842;
+  --text-muted: rgba(33, 40, 66, 0.64);
+  --border-soft: rgba(33, 40, 66, 0.18);
+  --border-strong: rgba(33, 40, 66, 0.32);
+  --ink: #212842;
+  --flag-bg: #fbe9df;
+  --flag-text: #7a4326;
+  --success: #2f6b4f;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --panel-w: 220px;
+  --panel-w-mobile: 76px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* =========================
+   APP LAYOUT
+========================= */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* =========================
+   LEFT ICON PANEL (persistent nav)
+========================= */
+.icon-panel {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: var(--panel-w);
+  height: 100vh;
+
+  border-right: 1px solid var(--border-soft);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.04));
+  box-shadow: 4px 0 24px -12px rgba(33, 40, 66, 0.18);
+
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
+}
+
+.panel-brand {
+  padding: 2rem 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.panel-brand-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  background: var(--ink);
+  color: var(--bg-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.panel-brand-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.panel-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.4rem;
+  padding: 0 0 3rem;
+}
+
+.panel-nav button,
+.panel-nav a {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0 1.6rem;
+
+  opacity: 0.62;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.panel-nav button:hover,
+.panel-nav a:hover {
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+.panel-nav .active {
+  opacity: 1;
+}
+
+.panel-nav .active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 18px;
+  background: var(--ink);
+  border-radius: 2px;
+}
+
+.panel-nav span {
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  text-transform: lowercase;
+}
+
+/* ---- bottom-docked: info button + login + copyright ---- */
+.panel-bottom {
+  padding: 1.2rem 1.6rem 1.6rem;
+  border-top: 1px solid var(--border-soft);
+}
+
+.panel-bottom-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.info-btn {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1.4px solid var(--border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  text-decoration: none;
+  opacity: 0.75;
+  transition: opacity 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.info-btn:hover,
+.info-btn.active {
+  opacity: 1;
+  background: var(--ink);
+  color: var(--bg-card);
+  border-color: var(--ink);
+}
+
+.panel-login-btn {
+  flex: 1;
+}
+
+.panel-copyright {
+  font-size: 0.66rem;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+.content {
+  margin-left: var(--panel-w);
+  width: calc(100% - var(--panel-w));
+  min-height: 100vh;
+}
+
+.page {
+  padding: 3.4rem 4rem 5rem;
+  max-width: 1240px;
+}
+
+.page-narrow {
+  max-width: 880px;
+}
+
+/* =========================
+   TYPE
+========================= */
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.9rem;
+  display: block;
+}
+
+.display-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1.4px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  padding: 0.8rem 1.7rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--ink);
+  color: var(--bg-card);
+  transform: translateY(-1px);
+}
+
+.btn-solid {
+  background: var(--ink);
+  color: var(--bg-card);
+}
+
+.btn-solid:hover {
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn-block {
+  width: 100%;
+  justify-content: center;
+}
+
+.btn-sm {
+  padding: 0.55rem 1.2rem;
+  font-size: 0.78rem;
+}
+
+/* =========================
+   CARDS / PANELS
+========================= */
+.panel-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 1.6rem;
+  box-shadow: 0 1px 2px rgba(33, 40, 66, 0.03), 0 10px 28px -18px rgba(33, 40, 66, 0.35);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.panel-card-alt {
+  background: var(--bg-card-alt);
+}
+
+.card-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.card-value {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.card-delta {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.card-delta.flag {
+  color: var(--flag-text);
+}
+
+/* =========================
+   MONEY BOAT
+   (folded-note paper boat — the finance
+   equivalent of the reference site's tiger)
+========================= */
+.money-boat {
+  position: fixed;
+  right: 20px;
+  bottom: 16px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.money-boat svg {
+  width: 108px;
+  height: 76px;
+}
+
+.boat-hull {
+  transform-origin: 60px 70px;
+  animation: boat-bob 4.2s ease-in-out infinite;
+}
+
+.boat-water {
+  transform-origin: 60px 70px;
+  animation: water-drift 4.2s ease-in-out infinite;
+}
+
+.boat-water-2 {
+  animation-delay: 0.3s;
+}
+
+@keyframes boat-bob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-3px) rotate(-1.2deg); }
+}
+
+@keyframes water-drift {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(1.5px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .boat-hull,
+  .boat-water {
+    animation: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .money-boat {
+    right: 12px;
+    bottom: 70px; /* clear the fixed bottom nav */
+  }
+  .money-boat svg {
+    width: 78px;
+    height: 54px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+/* mobile bottom tab bar — hidden on desktop by default */
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  /* sidebar steps aside entirely in favor of the bottom bar */
+  .icon-panel {
+    display: none;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+    padding-bottom: 5.5rem; /* room for the fixed bottom bar */
+  }
+
+  .page {
+    padding: 2.2rem 1.3rem 2rem;
+  }
+
+  .mobile-nav {
+    display: flex;
+    position: fixed;
+    inset: auto 0 0 0;
+    height: 62px;
+    z-index: 30;
+
+    background: rgba(247, 250, 255, 0.92);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--border-soft);
+    box-shadow: 0 -6px 20px -12px rgba(33, 40, 66, 0.25);
+
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .mobile-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    color: var(--ink);
+    opacity: 0.5;
+    transition: opacity 0.2s ease, background 0.2s ease;
+  }
+
+  .mobile-nav a.active {
+    opacity: 1;
+    background: rgba(33, 40, 66, 0.08);
+  }
+}
+
+/* =========================
+   UPLOAD FLOW PAGE
+========================= */
+.upload-flow-card {
+  padding: 2rem;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-status {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.upload-spinner {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto 1.1rem;
+  border-radius: 999px;
+  border: 3px solid var(--border-soft);
+  border-top-color: var(--ink);
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.upload-status-check {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 1rem;
+  border-radius: 999px;
+  background: var(--success);
+  color: #f7faff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .upload-spinner {
+    animation: none;
+  }
+}
