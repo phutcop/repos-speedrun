@@ -1,0 +1,77 @@
+[
+    {
+      "question": "Which department spent the most in 2025?",
+      "expected_answer": "Engineering, at $785,792.68",
+      "type": "general"
+    },
+    {
+      "question": "How much did Sales spend in total this year?",
+      "expected_answer": "$427,704.42",
+      "type": "general"
+    },
+    {
+      "question": "How much did Finance spend in total this year?",
+      "expected_answer": "$123,219.19",
+      "type": "general"
+    },
+    {
+      "question": "What's our biggest spending category?",
+      "expected_answer": "Salaries & Payroll at $1,846,922.34",
+      "type": "general"
+    },
+    {
+      "question": "How much have we spent on Marketing & Advertising this year?",
+      "expected_answer": "$53,539.73",
+      "type": "general"
+    },
+    {
+      "question": "Who is our top vendor by total spend?",
+      "expected_answer": "Gusto Payroll, at $1,846,922.34",
+      "type": "general"
+    },
+    {
+      "question": "How much have we paid WeWork this year?",
+      "expected_answer": "$74,105.26",
+      "type": "general"
+    },
+    {
+      "question": "How much have we paid AWS (Amazon Web Services) this year?",
+      "expected_answer": "$40,783.88",
+      "type": "general"
+    },
+    {
+      "question": "Was Engineering over budget in February 2025?",
+      "expected_answer": "Yes, actual $63,890.23 vs budget $63,810.88 (over by $79.35)",
+      "type": "general"
+    },
+    {
+      "question": "Was Customer Success under or over budget in September 2025?",
+      "expected_answer": "Under budget: actual $19,209.43 vs budget $21,213.52 (under by $2,004.09)",
+      "type": "general"
+    },
+    {
+      "question": "Was Sales over budget in December 2025?",
+      "expected_answer": "Yes, actual $35,044.64 vs budget $34,294.09 (over by $750.55)",
+      "type": "general"
+    },
+    {
+      "question": "What did we spend in total in January 2025 vs December 2025?",
+      "expected_answer": "January: $170,346.41, December: $182,972.08",
+      "type": "general"
+    },
+    {
+      "question": "What if we cut Software Subscriptions by 20%?",
+      "expected_answer": "Software Subscriptions annual total is $21,443.66, so a 20% cut frees up $4,288.73",
+      "type": "whatif"
+    },
+    {
+      "question": "How much would we save if we reduced Insurance costs by 10%?",
+      "expected_answer": "Insurance annual total is $13,847.88, so a 10% cut saves $1,384.79",
+      "type": "whatif"
+    },
+    {
+      "question": "What will our revenue be next quarter?",
+      "expected_answer": "Should be a graceful refusal — the data has no revenue field, only expenses/budgets",
+      "type": "refusal"
+    }
+  ]
