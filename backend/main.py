@@ -16,14 +16,17 @@ POST /chat
     "evidence": {...}          # only present for "whatif" — optional to show
   }
 """
-
+from dotenv import load_dotenv
+load_dotenv()
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 from chat import answer_question
+from intelligence import router as intel_router
 
 app = FastAPI(title="Finance Chatbot API")
+app.include_router(intel_router)
 
 # Allow the React dev server to call this during local development.
 # Tighten allow_origins before deploying.
