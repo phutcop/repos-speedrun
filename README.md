@@ -1,4 +1,44 @@
-# Finance Advisor — UI Scaffold
+# Finshyt — Brutalist Financial Co-Pilot
+
+A highly stylized, brutalist-inspired financial co-pilot application. This repository contains both the fully polished React frontend and the foundational Python backend designed to deliver enterprise-grade financial intelligence for startups.
+
+## 🚀 What Has Been Done
+
+### 1. UI & Aesthetic Overhaul (Brutalist Editorial Theme)
+- **Typography Integration:** Swapped out generic fonts for a heavy, high-contrast stack using custom fonts (Geometrica Sans for body, Vanguard CF / Onlink for massive, punchy display headers).
+- **Responsive Layout Architecture:** Built a completely responsive navigation system. Uses a persistent left icon-rail on desktop that gracefully collapses into a sticky mobile top header and bottom tab bar on mobile devices (explicitly handling horizontal landscape orientations on phones).
+- **Page Redesigns:**
+  - **Landing Page:** Features a massive hero section and a custom interactive workflow. On desktop, workflow descriptions render on hover; on mobile, they operate as a seamless tap-to-toggle accordion.
+  - **About Us:** Transformed into a clean, two-column editorial layout detailing the origin story and team members (Heiley, Sahil, Triza, Yashraj).
+  - **Login Page:** Stripped away generic background animations (removed `DataRain`) for a focused, high-contrast, distraction-free entry point.
+- **Component Polish:** Built and styled highly customized UI elements including `SummaryCard`s and robust chart shells (`ExpenseTrendChart`, `CategoryPieChart`, `DepartmentBarChart`).
+
+### 2. Backend Infrastructure
+- **LLM-Powered Chat Engine (`chat.py`):** A sophisticated routing backend connected to Groq. It classifies user queries into three paths:
+  1. **What-If Analysis:** Intercepts scenarios (e.g., "what if we cut X by 20%?"), performs pure Python arithmetic on the data pack, and uses the LLM solely for natural language formatting to eliminate hallucinations.
+  2. **General Context Retrieval:** Pulls data from the live `INTEL_BASE_URL` (or a local `summary.json` fallback) and forces the LLM to answer strictly from the provided context.
+  3. **Complex Fallback (`query_engine.py`):** Automatically escalates to a real SQL database query engine if the context cannot answer the prompt.
+
+## 🔌 What Is Currently Plugged In
+- **Backend Data Fetching:** The Python backend is fully capable of fetching live data from aggregate endpoints (`http://localhost:8000/api/intel`) and interacting with the Groq API.
+- **Frontend State:** The React app manages its own routing (via `react-router-dom`), responsive state, and theme switching (dark/light mode via `IconPanel`).
+- **Frontend Mock Layer:** The charts and data displays are currently rendering beautiful placeholder data (`frontend/src/data/mockData.js`). The frontend is currently a **clean visual shell** waiting to be wired to the Python endpoints.
+
+## 🛠️ What Is Left To Do
+
+1. **Wire Frontend to Backend (API Integration):**
+   - Connect the Chatbot UI (`AdvisorPage.jsx`) to the backend `answer_question` endpoint so users can interact with the Groq LLM in real-time.
+   - Replace the `mockData.js` imports in the Dashboard charts with `fetch` calls to the live Python analytics endpoints.
+2. **Implement Authentication:**
+   - The current login button is a React state stub (`isAuthenticated = true`). This needs to be wired up to actual JWT/Session-based authentication so the backend can scope data by `company_id`.
+3. **Ledger Upload Logic:**
+   - The `UploadPanel.jsx` is visually complete but needs to be hooked up to a backend endpoint to parse CSV/Excel files and ingest the startup's financial data into the database.
+4. **Deploy:**
+   - Setup Dockerfiles or deployment scripts for both the Vite React frontend and the FastAPI Python backend.
+
+---
+
+## 📜 Original Project Documentation
 
 UI-only build of the 3 sketched pages: **Landing**, **Dashboard**, and
 **Finance Advisor** (plus simple About/Login placeholders). Theme is carried
