@@ -1,0 +1,299 @@
+expense_id,date,amount,description,vendor,department,category
+EXP00001,2025-01-01,6175.43,WeWork office lease - January,WeWork,Operations,Office Rent & Facilities
+EXP00002,2025-01-03,196.81,Local Bistro - team meal/event,Local Bistro,Engineering,Meals & Entertainment
+EXP00003,2025-01-03,57.6,Sweetgreen Catering - team meal/event,Sweetgreen Catering,Sales,Meals & Entertainment
+EXP00004,2025-01-03,280.21,Local Bistro - team meal/event,Local Bistro,Sales,Meals & Entertainment
+EXP00005,2025-01-03,474.25,Internet & utilities - January,Comcast Business,Operations,Utilities
+EXP00006,2025-01-05,1160.57,Business insurance premium - January,Hiscox Business Insurance,Operations,Insurance
+EXP00007,2025-01-07,551.67,Datadog subscription - January,Datadog,Engineering,Software Subscriptions
+EXP00008,2025-01-08,149.24,Figma subscription - January,Figma,Marketing,Software Subscriptions
+EXP00009,2025-01-09,2510.6,Google Ads campaign - January,Google Ads,Marketing,Marketing & Advertising
+EXP00010,2025-01-12,700.01,Delta Airlines - business travel January,Delta Airlines,Customer Success,Travel & Transportation
+EXP00011,2025-01-18,2907.82,AWS - EC2 & S3 hosting January,Amazon Web Services,Engineering,Cloud Services
+EXP00012,2025-01-20,171.48,Zoom subscription - January,Zoom,Sales,Software Subscriptions
+EXP00013,2025-01-23,261.17,Atlassian subscription - January,Atlassian,Engineering,Software Subscriptions
+EXP00014,2025-01-23,1465.18,LinkedIn Ads campaign - January,LinkedIn Ads,Marketing,Marketing & Advertising
+EXP00015,2025-01-25,114.12,Mailchimp campaign - January,Mailchimp,Marketing,Marketing & Advertising
+EXP00016,2025-01-28,60212.29,Engineering payroll - January 2025,Gusto Payroll,Engineering,Salaries & Payroll
+EXP00017,2025-01-28,33362.52,Sales payroll - January 2025,Gusto Payroll,Sales,Salaries & Payroll
+EXP00018,2025-01-28,25340.66,Marketing payroll - January 2025,Gusto Payroll,Marketing,Salaries & Payroll
+EXP00019,2025-01-28,16849.73,Customer Success payroll - January 2025,Gusto Payroll,Customer Success,Salaries & Payroll
+EXP00020,2025-01-28,8643.0,Operations payroll - January 2025,Gusto Payroll,Operations,Salaries & Payroll
+EXP00021,2025-01-28,8617.6,Finance payroll - January 2025,Gusto Payroll,Finance,Salaries & Payroll
+EXP00022,2025-01-28,144.45,Sweetgreen Catering - team meal/event,Sweetgreen Catering,Finance,Meals & Entertainment
+EXP00023,2025-02-01,6184.19,WeWork office lease - February,WeWork,Operations,Office Rent & Facilities
+EXP00024,2025-02-03,476.26,Internet & utilities - February,Comcast Business,Operations,Utilities
+EXP00025,2025-02-05,1161.36,Business insurance premium - February,Hiscox Business Insurance,Operations,Insurance
+EXP00026,2025-02-05,217.55,DoorDash - team meal/event,DoorDash,Engineering,Meals & Entertainment
+EXP00027,2025-02-08,549.97,Datadog subscription - February,Datadog,Engineering,Software Subscriptions
+EXP00028,2025-02-08,589.91,Uber - business travel February,Uber,Customer Success,Travel & Transportation
+EXP00029,2025-02-09,314.69,GitHub subscription - February,GitHub,Engineering,Software Subscriptions
+EXP00030,2025-02-09,104.38,Mailchimp campaign - February,Mailchimp,Marketing,Marketing & Advertising
+EXP00031,2025-02-12,105.31,Local Bistro - team meal/event,Local Bistro,Operations,Meals & Entertainment
+EXP00032,2025-02-16,70.0,Sweetgreen Catering - team meal/event,Sweetgreen Catering,Sales,Meals & Entertainment
+EXP00033,2025-02-19,1669.37,LinkedIn Ads campaign - February,LinkedIn Ads,Marketing,Marketing & Advertising
+EXP00034,2025-02-21,183.39,Zoom subscription - February,Zoom,Sales,Software Subscriptions
+EXP00035,2025-02-21,742.89,Airbnb - business travel February,Airbnb,Marketing,Travel & Transportation
+EXP00036,2025-02-22,3149.12,AWS - EC2 & S3 hosting February,Amazon Web Services,Engineering,Cloud Services
+EXP00037,2025-02-26,2644.98,Google Ads campaign - February,Google Ads,Marketing,Marketing & Advertising
+EXP00038,2025-02-27,913.88,HubSpot subscription - February,HubSpot,Sales,Software Subscriptions
+EXP00039,2025-02-28,59658.9,Engineering payroll - February 2025,Gusto Payroll,Engineering,Salaries & Payroll
+EXP00040,2025-02-28,34737.99,Sales payroll - February 2025,Gusto Payroll,Sales,Salaries & Payroll
+EXP00041,2025-02-28,25197.38,Marketing payroll - February 2025,Gusto Payroll,Marketing,Salaries & Payroll
+EXP00042,2025-02-28,16961.98,Customer Success payroll - February 2025,Gusto Payroll,Customer Success,Salaries & Payroll
+EXP00043,2025-02-28,8614.82,Operations payroll - February 2025,Gusto Payroll,Operations,Salaries & Payroll
+EXP00044,2025-02-28,8628.27,Finance payroll - February 2025,Gusto Payroll,Finance,Salaries & Payroll
+EXP00045,2025-03-01,3222.84,AWS - EC2 & S3 hosting March,Amazon Web Services,Engineering,Cloud Services
+EXP00046,2025-03-01,930.39,HubSpot subscription - March,HubSpot,Sales,Software Subscriptions
+EXP00047,2025-03-01,123.56,Mailchimp campaign - March,Mailchimp,Marketing,Marketing & Advertising
+EXP00048,2025-03-01,6196.71,WeWork office lease - March,WeWork,Operations,Office Rent & Facilities
+EXP00049,2025-03-03,487.19,Internet & utilities - March,Comcast Business,Operations,Utilities
+EXP00050,2025-03-05,4809.13,Harrison & Cole LLP - quarterly advisory/legal fees,Harrison & Cole LLP,Finance,Professional Services
+EXP00051,2025-03-05,1170.56,Business insurance premium - March,Hiscox Business Insurance,Operations,Insurance
+EXP00052,2025-03-13,1792.72,Indeed - hiring/recruiting cost,Indeed,Customer Success,Recruiting & HR
+EXP00053,2025-03-17,246.29,Notion subscription - March,Notion,Operations,Software Subscriptions
+EXP00054,2025-03-17,312.38,GitHub subscription - March,GitHub,Engineering,Software Subscriptions
+EXP00055,2025-03-18,874.37,GCP - BigQuery analytics March,Google Cloud Platform,Engineering,Cloud Services
+EXP00056,2025-03-19,347.77,Uber - business travel March,Uber,Engineering,Travel & Transportation
+EXP00057,2025-03-24,410.06,Slack subscription - March,Slack,Engineering,Software Subscriptions
+EXP00058,2025-03-25,1707.08,Meta Ads campaign - March,Meta Ads,Marketing,Marketing & Advertising
+EXP00059,2025-03-25,3154.84,Google Ads campaign - March,Google Ads,Marketing,Marketing & Advertising
+EXP00060,2025-03-25,2125.22,Logitech - laptop/equipment purchase,Logitech,Engineering,Equipment & Hardware
+EXP00061,2025-03-25,245.73,Sweetgreen Catering - team meal/event,Sweetgreen Catering,Sales,Meals & Entertainment
+EXP00062,2025-03-27,152.08,Figma subscription - March,Figma,Marketing,Software Subscriptions
+EXP00063,2025-03-27,1367.05,Delta Airlines - business travel March,Delta Airlines,Sales,Travel & Transportation
+EXP00064,2025-03-28,58498.99,Engineering payroll - March 2025,Gusto Payroll,Engineering,Salaries & Payroll
+EXP00065,2025-03-28,33968.75,Sales payroll - March 2025,Gusto Payroll,Sales,Salaries & Payroll
+EXP00066,2025-03-28,26260.05,Marketing payroll - March 2025,Gusto Payroll,Marketing,Salaries & Payroll
+EXP00067,2025-03-28,17109.75,Customer Success payroll - March 2025,Gusto Payroll,Customer Success,Salaries & Payroll
+EXP00068,2025-03-28,8742.71,Operations payroll - March 2025,Gusto Payroll,Operations,Salaries & Payroll
+EXP00069,2025-03-28,8695.83,Finance payroll - March 2025,Gusto Payroll,Finance,Salaries & Payroll
+EXP00070,2025-03-28,182.26,Zoom subscription - March,Zoom,Sales,Software Subscriptions
+EXP00071,2025-03-28,211.81,Sweetgreen Catering - team meal/event,Sweetgreen Catering,Marketing,Meals & Entertainment
+EXP00072,2025-04-01,6166.68,WeWork office lease - April,WeWork,Operations,Office Rent & Facilities
+EXP00073,2025-04-03,468.73,Internet & utilities - April,Comcast Business,Operations,Utilities
+EXP00074,2025-04-05,1130.47,Business insurance premium - April,Hiscox Business Insurance,Operations,Insurance
+EXP00075,2025-04-06,149.22,DoorDash - team meal/event,DoorDash,Customer Success,Meals & Entertainment
+EXP00076,2025-04-07,1668.77,Meta Ads campaign - April,Meta Ads,Marketing,Marketing & Advertising
+EXP00077,2025-04-07,570.93,Delta Airlines - business travel April,Delta Airlines,Engineering,Travel & Transportation
+EXP00078,2025-04-08,3256.11,AWS - EC2 & S3 hosting April,Amazon Web Services,Engineering,Cloud Services
+EXP00079,2025-04-09,773.6,Uber - business travel April,Uber,Customer Success,Travel & Transportation
+EXP00080,2025-04-14,1460.0,LinkedIn Ads campaign - April,LinkedIn Ads,Marketing,Marketing & Advertising
+EXP00081,2025-04-16,177.37,Local Bistro - team meal/event,Local Bistro,Sales,Meals & Entertainment
+EXP00082,2025-04-17,175.28,Zoom subscription - April,Zoom,Sales,Software Subscriptions
+EXP00083,2025-04-18,231.18,Notion subscription - April,Notion,Operations,Software Subscriptions
+EXP00084,2025-04-19,261.98,Atlassian subscription - April,Atlassian,Engineering,Software Subscriptions
+EXP00085,2025-04-21,319.8,DoorDash - team meal/event,DoorDash,Engineering,Meals & Entertainment
+EXP00086,2025-04-22,419.39,Slack subscription - April,Slack,Engineering,Software Subscriptions
+EXP00087,2025-04-22,117.52,Mailchimp campaign - April,Mailchimp,Marketing,Marketing & Advertising
+EXP00088,2025-04-23,830.85,GCP - BigQuery analytics April,Google Cloud Platform,Engineering,Cloud Services
+EXP00089,2025-04-24,350.92,Delta Airlines - business travel April,Delta Airlines,Sales,Travel & Transportation
+EXP00090,2025-04-25,278.39,DoorDash - team meal/event,DoorDash,Engineering,Meals & Entertainment
+EXP00091,2025-04-28,59613.35,Engineering payroll - April 2025,Gusto Payroll,Engineering,Salaries & Payroll
+EXP00092,2025-04-28,34199.88,Sales payroll - April 2025,Gusto Payroll,Sales,Salaries & Payroll
+EXP00093,2025-04-28,25144.28,Marketing payroll - April 2025,Gusto Payroll,Marketing,Salaries & Payroll
+EXP00094,2025-04-28,16850.99,Customer Success payroll - April 2025,Gusto Payroll,Customer Success,Salaries & Payroll
+EXP00095,2025-04-28,8473.69,Operations payroll - April 2025,Gusto Payroll,Operations,Salaries & Payroll
+EXP00096,2025-04-28,8580.03,Finance payroll - April 2025,Gusto Payroll,Finance,Salaries & Payroll
+EXP00097,2025-05-01,6196.02,WeWork office lease - May,WeWork,Operations,Office Rent & Facilities
+EXP00098,2025-05-01,228.66,Sweetgreen Catering - team meal/event,Sweetgreen Catering,Finance,Meals & Entertainment
+EXP00099,2025-05-02,251.06,Notion subscription - May,Notion,Operations,Software Subscriptions
+EXP00100,2025-05-03,558.97,Datadog subscription - May,Datadog,Engineering,Software Subscriptions
+EXP00101,2025-05-03,151.43,Figma subscription - May,Figma,Marketing,Software Subscriptions
+EXP00102,2025-05-03,500.72,Internet & utilities - May,Comcast Business,Operations,Utilities
+EXP00103,2025-05-05,590.77,Uber - business travel May,Uber,Engineering,Travel & Transportation
+EXP00104,2025-05-05,1139.2,Business insurance premium - May,Hiscox Business Insurance,Operations,Insurance
+EXP00105,2025-05-07,1022.88,GCP - BigQuery analytics May,Google Cloud Platform,Engineering,Cloud Services
+EXP00106,2025-05-12,123.37,DoorDash - team meal/event,DoorDash,Engineering,Meals & Entertainment
+EXP00107,2025-05-16,420.12,Slack subscription - May,Slack,Engineering,Software Subscriptions
+EXP00108,2025-05-18,1390.25,Apple Store - laptop/equipment purchase,Apple Store,Engineering,Equipment & Hardware
+EXP00109,2025-05-19,123.4,Mailchimp campaign - May,Mailchimp,Marketing,Marketing & Advertising
+EXP00110,2025-05-20,2448.87,Google Ads campaign - May,Google Ads,Marketing,Marketing & Advertising
+EXP00111,2025-05-22,269.41,Atlassian subscription - May,Atlassian,Engineering,Software Subscriptions
+EXP00112,2025-05-22,1537.65,LinkedIn Ads campaign - May,LinkedIn Ads,Marketing,Marketing & Advertising
+EXP00113,2025-05-23,3285.98,AWS - EC2 & S3 hosting May,Amazon Web Services,Engineering,Cloud Services
+EXP00114,2025-05-23,518.98,Marriott Hotels - business travel May,Marriott Hotels,Engineering,Travel & Transportation
+EXP00115,2025-05-23,128.19,Sweetgreen Catering - team meal/event,Sweetgreen Catering,Customer Success,Meals & Entertainment
+EXP00116,2025-05-25,649.93,Airbnb - business travel May,Airbnb,Engineering,Travel & Transportation
+EXP00117,2025-05-28,60642.61,Engineering payroll - May 2025,Gusto Payroll,Engineering,Salaries & Payroll
+EXP00118,2025-05-28,34093.51,Sales payroll - May 2025,Gusto Payroll,Sales,Salaries & Payroll
+EXP00119,2025-05-28,25529.33,Marketing payroll - May 2025,Gusto Payroll,Marketing,Salaries & Payroll
+EXP00120,2025-05-28,17473.72,Customer Success payroll - May 2025,Gusto Payroll,Customer Success,Salaries & Payroll
+EXP00121,2025-05-28,8753.05,Operations payroll - May 2025,Gusto Payroll,Operations,Salaries & Payroll
+EXP00122,2025-05-28,8566.2,Finance payroll - May 2025,Gusto Payroll,Finance,Salaries & Payroll
+EXP00123,2025-05-28,892.77,HubSpot subscription - May,HubSpot,Sales,Software Subscriptions
+EXP00124,2025-06-01,6180.29,WeWork office lease - June,WeWork,Operations,Office Rent & Facilities
+EXP00125,2025-06-01,94.32,Local Bistro - team meal/event,Local Bistro,Sales,Meals & Entertainment
+EXP00126,2025-06-03,2153.68,Meta Ads campaign - June,Meta Ads,Marketing,Marketing & Advertising
+EXP00127,2025-06-03,474.36,Internet & utilities - June,Comcast Business,Operations,Utilities
+EXP00128,2025-06-05,1167.24,Business insurance premium - June,Hiscox Business Insurance,Operations,Insurance
+EXP00129,2025-06-07,1331.74,Delta Airlines - business travel June,Delta Airlines,Engineering,Travel & Transportation
+EXP00130,2025-06-08,282.77,DoorDash - team meal/event,DoorDash,Finance,Meals & Entertainment
+EXP00131,2025-06-09,286.32,GitHub subscription - June,GitHub,Engineering,Software Subscriptions
+EXP00132,2025-06-09,88.78,DoorDash - team meal/event,DoorDash,Finance,Meals & Entertainment
+EXP00133,2025-06-10,3393.44,AWS - EC2 & S3 hosting June,Amazon Web Services,Engineering,Cloud Services
+EXP00134,2025-06-10,429.11,Airbnb - business travel June,Airbnb,Marketing,Travel & Transportation
+EXP00135,2025-06-11,246.51,Notion subscription - June,Notion,Operations,Software Subscriptions
+EXP00136,2025-06-12,322.15,United Airlines - business travel June,United Airlines,Marketing,Travel & Transportation
+EXP00137,2025-06-18,1592.55,LinkedIn Ads campaign - June,LinkedIn Ads,Marketing,Marketing & Advertising
+EXP00138,2025-06-18,2388.12,Google Ads campaign - June,Google Ads,Marketing,Marketing & Advertising
+EXP00139,2025-06-21,535.87,Datadog subscription - June,Datadog,Engineering,Software Subscriptions
+EXP00140,2025-06-25,4459.59,BrightPath Accounting - quarterly advisory/legal fees,BrightPath Accounting,Finance,Professional Services
+EXP00141,2025-06-26,229.22,Local Bistro - team meal/event,Local Bistro,Marketing,Meals & Entertainment
+EXP00142,2025-06-28,58618.17,Engineering payroll - June 2025,Gusto Payroll,Engineering,Salaries & Payroll
+EXP00143,2025-06-28,34812.82,Sales payroll - June 2025,Gusto Payroll,Sales,Salaries & Payroll
+EXP00144,2025-06-28,25327.19,Marketing payroll - June 2025,Gusto Payroll,Marketing,Salaries & Payroll
+EXP00145,2025-06-28,17416.26,Customer Success payroll - June 2025,Gusto Payroll,Customer Success,Salaries & Payroll
+EXP00146,2025-06-28,8645.53,Operations payroll - June 2025,Gusto Payroll,Operations,Salaries & Payroll
+EXP00147,2025-06-28,8396.07,Finance payroll - June 2025,Gusto Payroll,Finance,Salaries & Payroll
+EXP00148,2025-06-28,143.26,Figma subscription - June,Figma,Marketing,Software Subscriptions
+EXP00149,2025-07-01,230.77,Notion subscription - July,Notion,Operations,Software Subscriptions
+EXP00150,2025-07-01,6171.38,WeWork office lease - July,WeWork,Operations,Office Rent & Facilities
+EXP00151,2025-07-03,501.14,Internet & utilities - July,Comcast Business,Operations,Utilities
+EXP00152,2025-07-05,1161.13,Business insurance premium - July,Hiscox Business Insurance,Operations,Insurance
+EXP00153,2025-07-07,755.95,GCP - BigQuery analytics July,Google Cloud Platform,Engineering,Cloud Services
+EXP00154,2025-07-07,930.67,LinkedIn Recruiter - hiring/recruiting cost,LinkedIn Recruiter,Customer Success,Recruiting & HR
+EXP00155,2025-07-09,861.39,HubSpot subscription - July,HubSpot,Sales,Software Subscriptions
+EXP00156,2025-07-09,286.15,GitHub subscription - July,GitHub,Engineering,Software Subscriptions
+EXP00157,2025-07-10,184.46,Sweetgreen Catering - team meal/event,Sweetgreen Catering,Engineering,Meals & Entertainment
+EXP00158,2025-07-11,155.66,Local Bistro - team meal/event,Local Bistro,Finance,Meals & Entertainment
+EXP00159,2025-07-14,123.82,Mailchimp campaign - July,Mailchimp,Marketing,Marketing & Advertising
+EXP00160,2025-07-14,64.24,Local Bistro - team meal/event,Local Bistro,Sales,Meals & Entertainment
+EXP00161,2025-07-17,1680.92,Meta Ads campaign - July,Meta Ads,Marketing,Marketing & Advertising
+EXP00162,2025-07-18,255.61,Atlassian subscription - July,Atlassian,Engineering,Software Subscriptions
+EXP00163,2025-07-19,1360.54,LinkedIn Ads campaign - July,LinkedIn Ads,Marketing,Marketing & Advertising
+EXP00164,2025-07-20,131.33,Local Bistro - team meal/event,Local Bistro,Finance,Meals & Entertainment
+EXP00165,2025-07-22,188.66,Zoom subscription - July,Zoom,Sales,Software Subscriptions
+EXP00166,2025-07-26,888.31,Delta Airlines - business travel July,Delta Airlines,Customer Success,Travel & Transportation
+EXP00167,2025-07-28,58425.21,Engineering payroll - July 2025,Gusto Payroll,Engineering,Salaries & Payroll
+EXP00168,2025-07-28,34120.17,Sales payroll - July 2025,Gusto Payroll,Sales,Salaries & Payroll
+EXP00169,2025-07-28,25244.46,Marketing payroll - July 2025,Gusto Payroll,Marketing,Salaries & Payroll
+EXP00170,2025-07-28,17440.68,Customer Success payroll - July 2025,Gusto Payroll,Customer Success,Salaries & Payroll
+EXP00171,2025-07-28,8478.6,Operations payroll - July 2025,Gusto Payroll,Operations,Salaries & Payroll
+EXP00172,2025-07-28,8678.73,Finance payroll - July 2025,Gusto Payroll,Finance,Salaries & Payroll
+EXP00173,2025-07-28,3325.37,AWS - EC2 & S3 hosting July,Amazon Web Services,Engineering,Cloud Services
+EXP00174,2025-08-01,6185.74,WeWork office lease - August,WeWork,Operations,Office Rent & Facilities
+EXP00175,2025-08-03,498.79,Internet & utilities - August,Comcast Business,Operations,Utilities
+EXP00176,2025-08-05,1285.99,LinkedIn Ads campaign - August,LinkedIn Ads,Marketing,Marketing & Advertising
+EXP00177,2025-08-05,1159.01,Business insurance premium - August,Hiscox Business Insurance,Operations,Insurance
+EXP00178,2025-08-05,265.39,Local Bistro - team meal/event,Local Bistro,Engineering,Meals & Entertainment
+EXP00179,2025-08-06,2749.45,Logitech - laptop/equipment purchase,Logitech,Engineering,Equipment & Hardware
+EXP00180,2025-08-08,2074.74,Meta Ads campaign - August,Meta Ads,Marketing,Marketing & Advertising
+EXP00181,2025-08-08,137.42,Mailchimp campaign - August,Mailchimp,Marketing,Marketing & Advertising
+EXP00182,2025-08-08,858.42,Airbnb - business travel August,Airbnb,Marketing,Travel & Transportation
+EXP00183,2025-08-08,297.3,Sweetgreen Catering - team meal/event,Sweetgreen Catering,Engineering,Meals & Entertainment
+EXP00184,2025-08-10,3385.47,AWS - EC2 & S3 hosting August,Amazon Web Services,Engineering,Cloud Services
+EXP00185,2025-08-16,916.14,HubSpot subscription - August,HubSpot,Sales,Software Subscriptions
+EXP00186,2025-08-17,548.85,Datadog subscription - August,Datadog,Engineering,Software Subscriptions
+EXP00187,2025-08-18,208.75,Sweetgreen Catering - team meal/event,Sweetgreen Catering,Finance,Meals & Entertainment
+EXP00188,2025-08-20,177.03,Zoom subscription - August,Zoom,Sales,Software Subscriptions
+EXP00189,2025-08-21,764.9,Airbnb - business travel August,Airbnb,Sales,Travel & Transportation
+EXP00190,2025-08-22,249.2,Atlassian subscription - August,Atlassian,Engineering,Software Subscriptions
+EXP00191,2025-08-26,307.08,GitHub subscription - August,GitHub,Engineering,Software Subscriptions
+EXP00192,2025-08-27,250.85,Notion subscription - August,Notion,Operations,Software Subscriptions
+EXP00193,2025-08-28,60325.02,Engineering payroll - August 2025,Gusto Payroll,Engineering,Salaries & Payroll
+EXP00194,2025-08-28,34854.77,Sales payroll - August 2025,Gusto Payroll,Sales,Salaries & Payroll
+EXP00195,2025-08-28,25774.78,Marketing payroll - August 2025,Gusto Payroll,Marketing,Salaries & Payroll
+EXP00196,2025-08-28,16915.81,Customer Success payroll - August 2025,Gusto Payroll,Customer Success,Salaries & Payroll
+EXP00197,2025-08-28,8562.87,Operations payroll - August 2025,Gusto Payroll,Operations,Salaries & Payroll
+EXP00198,2025-08-28,8330.17,Finance payroll - August 2025,Gusto Payroll,Finance,Salaries & Payroll
+EXP00199,2025-08-28,1324.41,Delta Airlines - business travel August,Delta Airlines,Marketing,Travel & Transportation
+EXP00200,2025-09-01,6196.66,WeWork office lease - September,WeWork,Operations,Office Rent & Facilities
+EXP00201,2025-09-01,3068.31,Logitech - laptop/equipment purchase,Logitech,Sales,Equipment & Hardware
+EXP00202,2025-09-01,151.94,Local Bistro - team meal/event,Local Bistro,Customer Success,Meals & Entertainment
+EXP00203,2025-09-03,1461.69,LinkedIn Ads campaign - September,LinkedIn Ads,Marketing,Marketing & Advertising
+EXP00204,2025-09-03,494.31,Internet & utilities - September,Comcast Business,Operations,Utilities
+EXP00205,2025-09-05,127.43,Mailchimp campaign - September,Mailchimp,Marketing,Marketing & Advertising
+EXP00206,2025-09-05,1168.02,Business insurance premium - September,Hiscox Business Insurance,Operations,Insurance
+EXP00207,2025-09-08,2701.75,Google Ads campaign - September,Google Ads,Marketing,Marketing & Advertising
+EXP00208,2025-09-10,525.66,Datadog subscription - September,Datadog,Engineering,Software Subscriptions
+EXP00209,2025-09-11,294.59,GitHub subscription - September,GitHub,Engineering,Software Subscriptions
+EXP00210,2025-09-15,249.01,Atlassian subscription - September,Atlassian,Engineering,Software Subscriptions
+EXP00211,2025-09-16,105.34,DoorDash - team meal/event,DoorDash,Operations,Meals & Entertainment
+EXP00212,2025-09-19,1338.66,Airbnb - business travel September,Airbnb,Customer Success,Travel & Transportation
+EXP00213,2025-09-21,146.09,Figma subscription - September,Figma,Marketing,Software Subscriptions
+EXP00214,2025-09-24,3697.38,AWS - EC2 & S3 hosting September,Amazon Web Services,Engineering,Cloud Services
+EXP00215,2025-09-24,195.19,Sweetgreen Catering - team meal/event,Sweetgreen Catering,Operations,Meals & Entertainment
+EXP00216,2025-09-25,3864.95,BrightPath Accounting - quarterly advisory/legal fees,BrightPath Accounting,Finance,Professional Services
+EXP00217,2025-09-27,352.85,Airbnb - business travel September,Airbnb,Customer Success,Travel & Transportation
+EXP00218,2025-09-28,60132.64,Engineering payroll - September 2025,Gusto Payroll,Engineering,Salaries & Payroll
+EXP00219,2025-09-28,34542.77,Sales payroll - September 2025,Gusto Payroll,Sales,Salaries & Payroll
+EXP00220,2025-09-28,25633.59,Marketing payroll - September 2025,Gusto Payroll,Marketing,Salaries & Payroll
+EXP00221,2025-09-28,17365.98,Customer Success payroll - September 2025,Gusto Payroll,Customer Success,Salaries & Payroll
+EXP00222,2025-09-28,8562.85,Operations payroll - September 2025,Gusto Payroll,Operations,Salaries & Payroll
+EXP00223,2025-09-28,8711.31,Finance payroll - September 2025,Gusto Payroll,Finance,Salaries & Payroll
+EXP00224,2025-10-01,6147.45,WeWork office lease - October,WeWork,Operations,Office Rent & Facilities
+EXP00225,2025-10-03,1626.55,LinkedIn Ads campaign - October,LinkedIn Ads,Marketing,Marketing & Advertising
+EXP00226,2025-10-03,490.32,Internet & utilities - October,Comcast Business,Operations,Utilities
+EXP00227,2025-10-05,1138.79,Business insurance premium - October,Hiscox Business Insurance,Operations,Insurance
+EXP00228,2025-10-07,238.91,Notion subscription - October,Notion,Operations,Software Subscriptions
+EXP00229,2025-10-07,1969.58,Apple Store - laptop/equipment purchase,Apple Store,Customer Success,Equipment & Hardware
+EXP00230,2025-10-11,430.97,Slack subscription - October,Slack,Engineering,Software Subscriptions
+EXP00231,2025-10-12,2568.35,Google Ads campaign - October,Google Ads,Marketing,Marketing & Advertising
+EXP00232,2025-10-13,528.03,Datadog subscription - October,Datadog,Engineering,Software Subscriptions
+EXP00233,2025-10-13,894.98,BambooHR - hiring/recruiting cost,BambooHR,Customer Success,Recruiting & HR
+EXP00234,2025-10-19,3657.71,AWS - EC2 & S3 hosting October,Amazon Web Services,Engineering,Cloud Services
+EXP00235,2025-10-19,52.06,DoorDash - team meal/event,DoorDash,Marketing,Meals & Entertainment
+EXP00236,2025-10-20,1261.9,Uber - business travel October,Uber,Marketing,Travel & Transportation
+EXP00237,2025-10-20,310.03,Sweetgreen Catering - team meal/event,Sweetgreen Catering,Sales,Meals & Entertainment
+EXP00238,2025-10-21,819.52,GCP - BigQuery analytics October,Google Cloud Platform,Engineering,Cloud Services
+EXP00239,2025-10-21,103.45,Mailchimp campaign - October,Mailchimp,Marketing,Marketing & Advertising
+EXP00240,2025-10-25,270.31,DoorDash - team meal/event,DoorDash,Finance,Meals & Entertainment
+EXP00241,2025-10-27,297.65,GitHub subscription - October,GitHub,Engineering,Software Subscriptions
+EXP00242,2025-10-27,852.79,HubSpot subscription - October,HubSpot,Sales,Software Subscriptions
+EXP00243,2025-10-28,60464.44,Engineering payroll - October 2025,Gusto Payroll,Engineering,Salaries & Payroll
+EXP00244,2025-10-28,34748.86,Sales payroll - October 2025,Gusto Payroll,Sales,Salaries & Payroll
+EXP00245,2025-10-28,26162.42,Marketing payroll - October 2025,Gusto Payroll,Marketing,Salaries & Payroll
+EXP00246,2025-10-28,17493.61,Customer Success payroll - October 2025,Gusto Payroll,Customer Success,Salaries & Payroll
+EXP00247,2025-10-28,8557.0,Operations payroll - October 2025,Gusto Payroll,Operations,Salaries & Payroll
+EXP00248,2025-10-28,8715.44,Finance payroll - October 2025,Gusto Payroll,Finance,Salaries & Payroll
+EXP00249,2025-11-01,248.39,Notion subscription - November,Notion,Operations,Software Subscriptions
+EXP00250,2025-11-01,6158.86,WeWork office lease - November,WeWork,Operations,Office Rent & Facilities
+EXP00251,2025-11-03,492.39,Internet & utilities - November,Comcast Business,Operations,Utilities
+EXP00252,2025-11-05,1141.95,Business insurance premium - November,Hiscox Business Insurance,Operations,Insurance
+EXP00253,2025-11-08,1311.51,Marriott Hotels - business travel November,Marriott Hotels,Sales,Travel & Transportation
+EXP00254,2025-11-13,994.09,United Airlines - business travel November,United Airlines,Customer Success,Travel & Transportation
+EXP00255,2025-11-14,313.82,GitHub subscription - November,GitHub,Engineering,Software Subscriptions
+EXP00256,2025-11-14,1032.87,BambooHR - hiring/recruiting cost,BambooHR,Customer Success,Recruiting & HR
+EXP00257,2025-11-15,551.19,Datadog subscription - November,Datadog,Engineering,Software Subscriptions
+EXP00258,2025-11-15,1863.28,Meta Ads campaign - November,Meta Ads,Marketing,Marketing & Advertising
+EXP00259,2025-11-17,426.2,Slack subscription - November,Slack,Engineering,Software Subscriptions
+EXP00260,2025-11-17,305.72,DoorDash - team meal/event,DoorDash,Operations,Meals & Entertainment
+EXP00261,2025-11-18,3030.7,Google Ads campaign - November,Google Ads,Marketing,Marketing & Advertising
+EXP00262,2025-11-20,3824.92,AWS - EC2 & S3 hosting November,Amazon Web Services,Engineering,Cloud Services
+EXP00263,2025-11-20,131.1,Mailchimp campaign - November,Mailchimp,Marketing,Marketing & Advertising
+EXP00264,2025-11-21,270.18,Atlassian subscription - November,Atlassian,Engineering,Software Subscriptions
+EXP00265,2025-11-23,287.03,Sweetgreen Catering - team meal/event,Sweetgreen Catering,Marketing,Meals & Entertainment
+EXP00266,2025-11-26,116.05,Local Bistro - team meal/event,Local Bistro,Sales,Meals & Entertainment
+EXP00267,2025-11-27,149.85,Figma subscription - November,Figma,Marketing,Software Subscriptions
+EXP00268,2025-11-27,1276.5,Marriott Hotels - business travel November,Marriott Hotels,Engineering,Travel & Transportation
+EXP00269,2025-11-28,58536.09,Engineering payroll - November 2025,Gusto Payroll,Engineering,Salaries & Payroll
+EXP00270,2025-11-28,34494.04,Sales payroll - November 2025,Gusto Payroll,Sales,Salaries & Payroll
+EXP00271,2025-11-28,25789.73,Marketing payroll - November 2025,Gusto Payroll,Marketing,Salaries & Payroll
+EXP00272,2025-11-28,16746.62,Customer Success payroll - November 2025,Gusto Payroll,Customer Success,Salaries & Payroll
+EXP00273,2025-11-28,8658.3,Operations payroll - November 2025,Gusto Payroll,Operations,Salaries & Payroll
+EXP00274,2025-11-28,8691.37,Finance payroll - November 2025,Gusto Payroll,Finance,Salaries & Payroll
+EXP00275,2025-12-01,6145.85,WeWork office lease - December,WeWork,Operations,Office Rent & Facilities
+EXP00276,2025-12-02,114.43,DoorDash - team meal/event,DoorDash,Marketing,Meals & Entertainment
+EXP00277,2025-12-03,461.48,Internet & utilities - December,Comcast Business,Operations,Utilities
+EXP00278,2025-12-05,1149.58,Business insurance premium - December,Hiscox Business Insurance,Operations,Insurance
+EXP00279,2025-12-07,294.47,GitHub subscription - December,GitHub,Engineering,Software Subscriptions
+EXP00280,2025-12-08,230.9,Notion subscription - December,Notion,Operations,Software Subscriptions
+EXP00281,2025-12-09,254.97,Atlassian subscription - December,Atlassian,Engineering,Software Subscriptions
+EXP00282,2025-12-10,2504.06,Apple Store - laptop/equipment purchase,Apple Store,Customer Success,Equipment & Hardware
+EXP00283,2025-12-12,153.04,Figma subscription - December,Figma,Marketing,Software Subscriptions
+EXP00284,2025-12-12,626.61,Uber - business travel December,Uber,Sales,Travel & Transportation
+EXP00285,2025-12-16,176.65,Local Bistro - team meal/event,Local Bistro,Operations,Meals & Entertainment
+EXP00286,2025-12-18,296.55,Marriott Hotels - business travel December,Marriott Hotels,Marketing,Travel & Transportation
+EXP00287,2025-12-21,5539.61,Harrison & Cole LLP - quarterly advisory/legal fees,Harrison & Cole LLP,Finance,Professional Services
+EXP00288,2025-12-23,3677.72,AWS - EC2 & S3 hosting December,Amazon Web Services,Engineering,Cloud Services
+EXP00289,2025-12-24,542.72,Datadog subscription - December,Datadog,Engineering,Software Subscriptions
+EXP00290,2025-12-24,1890.99,Meta Ads campaign - December,Meta Ads,Marketing,Marketing & Advertising
+EXP00291,2025-12-24,2875.25,Google Ads campaign - December,Google Ads,Marketing,Marketing & Advertising
+EXP00292,2025-12-25,1511.09,LinkedIn Ads campaign - December,LinkedIn Ads,Marketing,Marketing & Advertising
+EXP00293,2025-12-28,60364.56,Engineering payroll - December 2025,Gusto Payroll,Engineering,Salaries & Payroll
+EXP00294,2025-12-28,34418.03,Sales payroll - December 2025,Gusto Payroll,Sales,Salaries & Payroll
+EXP00295,2025-12-28,25615.8,Marketing payroll - December 2025,Gusto Payroll,Marketing,Salaries & Payroll
+EXP00296,2025-12-28,17333.99,Customer Success payroll - December 2025,Gusto Payroll,Customer Success,Salaries & Payroll
+EXP00297,2025-12-28,8369.55,Operations payroll - December 2025,Gusto Payroll,Operations,Salaries & Payroll
+EXP00298,2025-12-28,8424.18,Finance payroll - December 2025,Gusto Payroll,Finance,Salaries & Payroll

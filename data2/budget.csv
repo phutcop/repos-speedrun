@@ -1,0 +1,236 @@
+department,category,month,budgeted_amount
+Customer Success,Equipment & Hardware,December 2025,2645.86
+Customer Success,Equipment & Hardware,October 2025,1818.06
+Customer Success,Meals & Entertainment,April 2025,155.13
+Customer Success,Meals & Entertainment,May 2025,134.92
+Customer Success,Meals & Entertainment,September 2025,169.59
+Customer Success,Recruiting & HR,July 2025,877.34
+Customer Success,Recruiting & HR,March 2025,1720.23
+Customer Success,Recruiting & HR,November 2025,997.23
+Customer Success,Recruiting & HR,October 2025,979.28
+Customer Success,Salaries & Payroll,April 2025,16093.34
+Customer Success,Salaries & Payroll,August 2025,16687.24
+Customer Success,Salaries & Payroll,December 2025,16203.34
+Customer Success,Salaries & Payroll,February 2025,15715.75
+Customer Success,Salaries & Payroll,January 2025,16783.61
+Customer Success,Salaries & Payroll,July 2025,16549.96
+Customer Success,Salaries & Payroll,June 2025,16123.52
+Customer Success,Salaries & Payroll,March 2025,17243.73
+Customer Success,Salaries & Payroll,May 2025,16383.57
+Customer Success,Salaries & Payroll,November 2025,16607.5
+Customer Success,Salaries & Payroll,October 2025,17961.12
+Customer Success,Salaries & Payroll,September 2025,19327.73
+Customer Success,Travel & Transportation,April 2025,715.71
+Customer Success,Travel & Transportation,February 2025,632.71
+Customer Success,Travel & Transportation,January 2025,678.76
+Customer Success,Travel & Transportation,July 2025,891.06
+Customer Success,Travel & Transportation,November 2025,1050.63
+Customer Success,Travel & Transportation,September 2025,1716.2
+Engineering,Cloud Services,April 2025,4253.47
+Engineering,Cloud Services,August 2025,3295.53
+Engineering,Cloud Services,December 2025,3873.99
+Engineering,Cloud Services,February 2025,2995.78
+Engineering,Cloud Services,January 2025,2999.75
+Engineering,Cloud Services,July 2025,4441.62
+Engineering,Cloud Services,June 2025,3460.29
+Engineering,Cloud Services,March 2025,4473.83
+Engineering,Cloud Services,May 2025,4054.29
+Engineering,Cloud Services,November 2025,4100.6
+Engineering,Cloud Services,October 2025,4987.6
+Engineering,Cloud Services,September 2025,3683.5
+Engineering,Equipment & Hardware,August 2025,2716.39
+Engineering,Equipment & Hardware,March 2025,2068.11
+Engineering,Equipment & Hardware,May 2025,1393.49
+Engineering,Meals & Entertainment,April 2025,552.82
+Engineering,Meals & Entertainment,August 2025,613.83
+Engineering,Meals & Entertainment,February 2025,241.92
+Engineering,Meals & Entertainment,January 2025,200.42
+Engineering,Meals & Entertainment,July 2025,175.38
+Engineering,Meals & Entertainment,May 2025,117.47
+Engineering,Salaries & Payroll,April 2025,64637.82
+Engineering,Salaries & Payroll,August 2025,65938.39
+Engineering,Salaries & Payroll,December 2025,61152.36
+Engineering,Salaries & Payroll,February 2025,59760.53
+Engineering,Salaries & Payroll,January 2025,62574.14
+Engineering,Salaries & Payroll,July 2025,59389.22
+Engineering,Salaries & Payroll,June 2025,57305.46
+Engineering,Salaries & Payroll,March 2025,60780.97
+Engineering,Salaries & Payroll,May 2025,60648.1
+Engineering,Salaries & Payroll,November 2025,54192.09
+Engineering,Salaries & Payroll,October 2025,56598.53
+Engineering,Salaries & Payroll,September 2025,64851.77
+Engineering,Software Subscriptions,April 2025,706.87
+Engineering,Software Subscriptions,August 2025,1177.2
+Engineering,Software Subscriptions,December 2025,1137.92
+Engineering,Software Subscriptions,February 2025,812.65
+Engineering,Software Subscriptions,January 2025,879.68
+Engineering,Software Subscriptions,July 2025,568.6
+Engineering,Software Subscriptions,June 2025,858.8
+Engineering,Software Subscriptions,March 2025,697.13
+Engineering,Software Subscriptions,May 2025,1351.94
+Engineering,Software Subscriptions,November 2025,1526.22
+Engineering,Software Subscriptions,October 2025,1192.35
+Engineering,Software Subscriptions,September 2025,1071.56
+Engineering,Travel & Transportation,April 2025,609.13
+Engineering,Travel & Transportation,June 2025,1239.64
+Engineering,Travel & Transportation,March 2025,330.31
+Engineering,Travel & Transportation,May 2025,1762.62
+Engineering,Travel & Transportation,November 2025,1250.83
+Finance,Meals & Entertainment,August 2025,227.01
+Finance,Meals & Entertainment,January 2025,149.9
+Finance,Meals & Entertainment,July 2025,317.56
+Finance,Meals & Entertainment,June 2025,380.35
+Finance,Meals & Entertainment,May 2025,255.96
+Finance,Meals & Entertainment,October 2025,282.38
+Finance,Professional Services,December 2025,5605.61
+Finance,Professional Services,June 2025,4341.02
+Finance,Professional Services,March 2025,4991.67
+Finance,Professional Services,September 2025,4319.79
+Finance,Salaries & Payroll,April 2025,8652.5
+Finance,Salaries & Payroll,August 2025,8292.2
+Finance,Salaries & Payroll,December 2025,9414.28
+Finance,Salaries & Payroll,February 2025,8425.88
+Finance,Salaries & Payroll,January 2025,8440.69
+Finance,Salaries & Payroll,July 2025,9024.8
+Finance,Salaries & Payroll,June 2025,9066.6
+Finance,Salaries & Payroll,March 2025,8529.03
+Finance,Salaries & Payroll,May 2025,8079.51
+Finance,Salaries & Payroll,November 2025,8420.54
+Finance,Salaries & Payroll,October 2025,9110.77
+Finance,Salaries & Payroll,September 2025,9696.3
+Marketing,Marketing & Advertising,April 2025,3564.05
+Marketing,Marketing & Advertising,August 2025,3267.14
+Marketing,Marketing & Advertising,December 2025,6903.69
+Marketing,Marketing & Advertising,February 2025,4618.03
+Marketing,Marketing & Advertising,January 2025,3832.38
+Marketing,Marketing & Advertising,July 2025,3096.82
+Marketing,Marketing & Advertising,June 2025,5645.01
+Marketing,Marketing & Advertising,March 2025,4819.39
+Marketing,Marketing & Advertising,May 2025,4188.39
+Marketing,Marketing & Advertising,November 2025,4713.91
+Marketing,Marketing & Advertising,October 2025,4040.76
+Marketing,Marketing & Advertising,September 2025,4152.54
+Marketing,Meals & Entertainment,December 2025,120.88
+Marketing,Meals & Entertainment,June 2025,216.89
+Marketing,Meals & Entertainment,March 2025,211.92
+Marketing,Meals & Entertainment,November 2025,304.48
+Marketing,Meals & Entertainment,October 2025,48.67
+Marketing,Salaries & Payroll,April 2025,26970.3
+Marketing,Salaries & Payroll,August 2025,26209.56
+Marketing,Salaries & Payroll,December 2025,26366.85
+Marketing,Salaries & Payroll,February 2025,25549.7
+Marketing,Salaries & Payroll,January 2025,27244.72
+Marketing,Salaries & Payroll,July 2025,25531.17
+Marketing,Salaries & Payroll,June 2025,25756.29
+Marketing,Salaries & Payroll,March 2025,28997.36
+Marketing,Salaries & Payroll,May 2025,23674.35
+Marketing,Salaries & Payroll,November 2025,24016.01
+Marketing,Salaries & Payroll,October 2025,27597.99
+Marketing,Salaries & Payroll,September 2025,24362.7
+Marketing,Software Subscriptions,December 2025,156.03
+Marketing,Software Subscriptions,January 2025,165.63
+Marketing,Software Subscriptions,June 2025,152.14
+Marketing,Software Subscriptions,March 2025,141.73
+Marketing,Software Subscriptions,May 2025,168.66
+Marketing,Software Subscriptions,November 2025,142.85
+Marketing,Software Subscriptions,September 2025,161.09
+Marketing,Travel & Transportation,August 2025,2352.09
+Marketing,Travel & Transportation,December 2025,310.66
+Marketing,Travel & Transportation,February 2025,765.47
+Marketing,Travel & Transportation,June 2025,757.58
+Marketing,Travel & Transportation,October 2025,1358.19
+Operations,Insurance,April 2025,1139.01
+Operations,Insurance,August 2025,1245.4
+Operations,Insurance,December 2025,1097.86
+Operations,Insurance,February 2025,1082.44
+Operations,Insurance,January 2025,1102.94
+Operations,Insurance,July 2025,1120.42
+Operations,Insurance,June 2025,1181.71
+Operations,Insurance,March 2025,1265.12
+Operations,Insurance,May 2025,1121.21
+Operations,Insurance,November 2025,1191.62
+Operations,Insurance,October 2025,1070.4
+Operations,Insurance,September 2025,1274.55
+Operations,Meals & Entertainment,December 2025,170.72
+Operations,Meals & Entertainment,February 2025,102.46
+Operations,Meals & Entertainment,November 2025,341.08
+Operations,Meals & Entertainment,September 2025,295.61
+Operations,Office Rent & Facilities,April 2025,6009.12
+Operations,Office Rent & Facilities,August 2025,6614.16
+Operations,Office Rent & Facilities,December 2025,6160.66
+Operations,Office Rent & Facilities,February 2025,6219.85
+Operations,Office Rent & Facilities,January 2025,5762.1
+Operations,Office Rent & Facilities,July 2025,5694.55
+Operations,Office Rent & Facilities,June 2025,6754.95
+Operations,Office Rent & Facilities,March 2025,6028.85
+Operations,Office Rent & Facilities,May 2025,6045.03
+Operations,Office Rent & Facilities,November 2025,6267.19
+Operations,Office Rent & Facilities,October 2025,6063.84
+Operations,Office Rent & Facilities,September 2025,6857.04
+Operations,Salaries & Payroll,April 2025,8675.3
+Operations,Salaries & Payroll,August 2025,9184.32
+Operations,Salaries & Payroll,December 2025,9282.23
+Operations,Salaries & Payroll,February 2025,8422.03
+Operations,Salaries & Payroll,January 2025,9522.0
+Operations,Salaries & Payroll,July 2025,8123.53
+Operations,Salaries & Payroll,June 2025,9043.26
+Operations,Salaries & Payroll,March 2025,8862.83
+Operations,Salaries & Payroll,May 2025,8494.66
+Operations,Salaries & Payroll,November 2025,8711.44
+Operations,Salaries & Payroll,October 2025,9505.35
+Operations,Salaries & Payroll,September 2025,8094.03
+Operations,Software Subscriptions,April 2025,252.47
+Operations,Software Subscriptions,August 2025,263.89
+Operations,Software Subscriptions,December 2025,230.09
+Operations,Software Subscriptions,July 2025,226.65
+Operations,Software Subscriptions,June 2025,229.33
+Operations,Software Subscriptions,March 2025,232.24
+Operations,Software Subscriptions,May 2025,252.86
+Operations,Software Subscriptions,November 2025,272.6
+Operations,Software Subscriptions,October 2025,263.3
+Operations,Utilities,April 2025,481.85
+Operations,Utilities,August 2025,472.5
+Operations,Utilities,December 2025,441.18
+Operations,Utilities,February 2025,492.32
+Operations,Utilities,January 2025,501.42
+Operations,Utilities,July 2025,501.94
+Operations,Utilities,June 2025,518.89
+Operations,Utilities,March 2025,525.31
+Operations,Utilities,May 2025,507.73
+Operations,Utilities,November 2025,506.28
+Operations,Utilities,October 2025,533.96
+Operations,Utilities,September 2025,492.63
+Sales,Equipment & Hardware,September 2025,3356.49
+Sales,Meals & Entertainment,April 2025,171.3
+Sales,Meals & Entertainment,February 2025,65.54
+Sales,Meals & Entertainment,January 2025,349.77
+Sales,Meals & Entertainment,July 2025,68.16
+Sales,Meals & Entertainment,June 2025,102.34
+Sales,Meals & Entertainment,March 2025,233.06
+Sales,Meals & Entertainment,November 2025,109.1
+Sales,Meals & Entertainment,October 2025,301.66
+Sales,Salaries & Payroll,April 2025,35405.41
+Sales,Salaries & Payroll,August 2025,35179.25
+Sales,Salaries & Payroll,December 2025,33644.53
+Sales,Salaries & Payroll,February 2025,36748.42
+Sales,Salaries & Payroll,January 2025,34819.92
+Sales,Salaries & Payroll,July 2025,34613.0
+Sales,Salaries & Payroll,June 2025,38160.75
+Sales,Salaries & Payroll,March 2025,36850.93
+Sales,Salaries & Payroll,May 2025,36551.65
+Sales,Salaries & Payroll,November 2025,33972.32
+Sales,Salaries & Payroll,October 2025,34252.41
+Sales,Salaries & Payroll,September 2025,36283.86
+Sales,Software Subscriptions,April 2025,184.9
+Sales,Software Subscriptions,August 2025,1006.28
+Sales,Software Subscriptions,February 2025,1062.13
+Sales,Software Subscriptions,January 2025,172.03
+Sales,Software Subscriptions,July 2025,1164.94
+Sales,Software Subscriptions,March 2025,1039.48
+Sales,Software Subscriptions,May 2025,959.29
+Sales,Software Subscriptions,October 2025,852.36
+Sales,Travel & Transportation,April 2025,376.52
+Sales,Travel & Transportation,August 2025,792.42
+Sales,Travel & Transportation,December 2025,649.56
+Sales,Travel & Transportation,March 2025,1474.4
+Sales,Travel & Transportation,November 2025,1268.17

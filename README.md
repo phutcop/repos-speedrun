@@ -115,3 +115,52 @@ Every stub is marked with a `TODO(team)` comment. The main ones:
 - No external image assets are required; all icons are inline SVG
   (`src/components/Icons.jsx`), so the whole thing runs cleanly with just
   `npm install`.
+
+## Backend setup (chatbot + intelligence API)
+
+The frontend currently runs on mock data (`src/data/mockData.js`). To connect it to the real thing, the backend needs to be running separately.
+
+```bash
+cd backend
+python3 -m venv venv
+source venv/bin/activate      # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+**Environment variables** — copy the example file and fill in your own key:
+```bash
+cp .env.example .env
+```
+Then edit `.env`:
+```
+GROQ_API_KEY=your_key_here
+```
+
+Everyone on the team needs **their own** Groq API key — don't share one key in a committed file:
+1. Go to [console.groq.com](https://console.groq.com)
+2. Sign up/log in (free, no card required)
+3. **API Keys** in the sidebar → **Create API Key**
+4. Copy it into your own local `.env` (never commit this file — it's already in `.gitignore`)
+
+**Run the backend:**
+```bash
+uvicorn main:app --reload --port 8000
+```
+
+**Test it's working:**
+- `http://localhost:8000/health` → should return `{"status": "ok"}`
+- `http://localhost:8000/docs` → interactive API docs, use this to try `/chat` and `/api/intel/*` endpoints by hand
+- Or from the terminal:
+```bash
+  curl -X POST http://localhost:8000/chat \
+    -H "Content-Type: application/json" \
+    -d '{"question": "What was our biggest expense category?"}'
+```
+
+**Run the chatbot's evaluation suite** (test questions with known answers, used to report accuracy):
+```bash
+python3 run_eval.py
+```
+Full output also saves to `eval_results.txt`.
+
+**Run both halves together:** backend on `localhost:8000`, frontend on `localhost:5173` (Vite's default, confirmed in `vite.config.js`) — CORS is already configured for that port in `main.py`.
