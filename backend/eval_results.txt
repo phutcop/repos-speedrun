@@ -1,0 +1,85 @@
+Running 15 eval questions...
+
+[1] Q: Which department spent the most in 2025?
+    Expected type: general | Got type: general
+    Expected: Engineering, at $785,792.68
+    Model said: Engineering spent the most in 2025, with total expenditures of $785,792.68 for the year.
+
+[2] Q: How much did Sales spend in total this year?
+    Expected type: general | Got type: general
+    Expected: $427,704.42
+    Model said: Sales spent **$427,704.42** in total for the year 2025.
+
+[3] Q: How much did Finance spend in total this year?
+    Expected type: general | Got type: general
+    Expected: $123,219.19
+    Model said: Finance spent **$123,219.19** in total for the year.
+
+[4] Q: What's our biggest spending category?
+    Expected type: general | Got type: general
+    Expected: Salaries & Payroll at $1,846,922.34
+    Model said: The largest spending category for the year is **Salaries & Payroll**, with total expenditures of **$1,846,922.34** (annual figure).
+
+[5] Q: How much have we spent on Marketing & Advertising this year?
+    Expected type: general | Got type: general
+    Expected: $53,539.73
+    Model said: We’ve spent **$53,539.73** on Marketing & Advertising so far this year (category_totals for 2025).
+
+[6] Q: Who is our top vendor by total spend?
+    Expected type: general | Got type: general
+    Expected: Gusto Payroll, at $1,846,922.34
+    Model said: The top vendor by total spend is **Gusto Payroll**, with an annual spend of **$1,846,922.34** (from `top_vendors_annual`).
+
+[7] Q: How much have we paid WeWork this year?
+    Expected type: general | Got type: general
+    Expected: $74,105.26
+    Model said: We’ve paid **$74,105.26** to WeWork so far this year (annual total from top_vendors_annual).
+
+[8] Q: How much have we paid AWS (Amazon Web Services) this year?
+    Expected type: general | Got type: general
+    Expected: $40,783.88
+    Model said: We’ve spent **$40,783.88** on Amazon Web Services so far this year (2025).
+
+[9] Q: Was Engineering over budget in February 2025?
+    Expected type: general | Got type: general
+    Expected: Yes, actual $63,890.23 vs budget $63,810.88 (over by $79.35)
+    Model said: Yes. In February 2025, Engineering spent $63,890.23 against a budget of $63,810.88—a positive variance of $79.35, or 100.1 % of its budget, indicating it was over budget.
+
+[10] Q: Was Customer Success under or over budget in September 2025?
+    Expected type: general | Got type: general
+    Expected: Under budget: actual $19,209.43 vs budget $21,213.52 (under by $2,004.09)
+    Model said: Customer Success was **under budget** in September 2025, spending $19,209.43 against a budget of $21,213.52 (a $2,004.09 shortfall, 90.6% of the budget).
+
+[11] Q: Was Sales over budget in December 2025?
+    Expected type: general | Got type: general
+    Expected: Yes, actual $35,044.64 vs budget $34,294.09 (over by $750.55)
+    Model said: Yes. In December 2025, Sales had a budget of $34,294.09 and actual spending of $35,044.64, exceeding the budget by $750.55 (102.2% of budget).
+
+[12] Q: What did we spend in total in January 2025 vs December 2025?
+    Expected type: general | Got type: general
+    Expected: January: $170,346.41, December: $182,972.08
+    Model said: - January 2025 total spend: **$170,346.41** (from `monthly_trend["2025-01"]`).  
+- December 2025 total spend: **$182,972.08** (from `monthly_trend["2025-12"]`).
+
+[13] Q: What if we cut Software Subscriptions by 20%?
+    Expected type: whatif | Got type: whatif
+    Expected: Software Subscriptions annual total is $21,443.66, so a 20% cut frees up $4,288.73
+    Model said: Cutting Software Subscriptions by 20% would lower the annual spend from $21,443.66 to about $17,154.93, saving roughly $4,288.73 per year.
+
+[14] Q: How much would we save if we reduced Insurance costs by 10%?
+    Expected type: whatif | Got type: whatif
+    Expected: Insurance annual total is $13,847.88, so a 10% cut saves $1,384.79
+    Model said: Cutting insurance costs by 10 % would save roughly **$1,384.79 per year** (down from an annual total of $13,847.88).
+
+[15] Q: What will our revenue be next quarter?
+    Expected type: refusal | Got type: refusal
+    Expected: Should be a graceful refusal — the data has no revenue field, only expenses/budgets
+    Model said: I can't safely answer that from the database. (model could not translate this into a query) Try rephrasing, or ask about totals, categories, departments, vendors, or budgets directly.
+
+
+--- SCORING ---
+Go through each [i] above. Mark it correct if 'Model said' matches
+the substance of 'Expected' (exact wording doesn't need to match,
+the numbers/facts do). Then:
+  accuracy = (# correct) / 15
+Report that percentage as your published eval score.
