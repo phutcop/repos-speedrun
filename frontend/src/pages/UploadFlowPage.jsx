@@ -28,23 +28,27 @@ function UploadFlowPage() {
   };
 
   return (
-    <div className="page" style={{ display: "flex", justifyContent: "center", paddingTop: "3.4rem" }}>
-      <div style={{ width: "100%", maxWidth: 560 }}>
-        <span className="eyebrow" style={{ textAlign: "center", display: "block" }}>
-          step 1 of 1
-        </span>
+    <div className="page" style={{ display: "flex", justifyContent: "center", paddingTop: "5rem" }}>
+      <div style={{ width: "100%", maxWidth: 640 }}>
         <h1
           className="display-title"
-          style={{ fontSize: "clamp(1.7rem, 3.4vw, 2.2rem)", textAlign: "center", marginBottom: "0.6rem" }}
+          style={{ fontSize: "3rem", textAlign: "center", marginBottom: "1rem" }}
         >
-          Upload your balance sheet
+          Upload your ledger.
         </h1>
-        <p className="muted" style={{ textAlign: "center", marginBottom: "2rem", fontSize: "0.95rem" }}>
-          We'll take it from here — your dashboard builds itself the moment
-          we're done reading it.
+        <p className="muted" style={{ textAlign: "center", marginBottom: "3rem", fontSize: "1rem", fontFamily: "var(--font-mono)", maxWidth: 480, margin: "0 auto 3rem auto" }}>
+          We handle the categorization and synthesis so your dashboard builds itself instantly.
         </p>
 
-        <div className="panel-card panel-card-alt upload-flow-card">
+        <div style={{ 
+          border: "1px solid var(--ink)", 
+          background: "var(--bg-card-alt)", 
+          padding: "3rem", 
+          minHeight: "280px", 
+          display: "flex", 
+          alignItems: "center", 
+          justifyContent: "center" 
+        }}>
           {status === "idle" && (
             <UploadPanel onFileSelected={handleFileSelected} />
           )}

@@ -2,7 +2,7 @@ import { TrendIcon } from "./Icons";
 
 function SummaryCard({ label, value, delta, trend }) {
   return (
-    <div className="panel-card">
+    <div style={{ border: "1px solid var(--ink)", padding: "1.6rem 2rem" }}>
       <div className="card-label">{label}</div>
       <div className="card-value">{value}</div>
       <div className={`card-delta ${trend === "flag" ? "flag" : ""}`}>

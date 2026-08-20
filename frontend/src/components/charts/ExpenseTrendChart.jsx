@@ -4,36 +4,37 @@ function ExpenseTrendChart({ data }) {
   return (
     <ResponsiveContainer width="100%" height={200}>
       <LineChart data={data} margin={{ top: 8, right: 12, left: -12, bottom: 0 }}>
-        <CartesianGrid stroke="rgba(33,40,66,0.08)" vertical={false} />
+        <CartesianGrid stroke="var(--border-soft)" vertical={false} />
         <XAxis
           dataKey="month"
-          tick={{ fontSize: 12, fill: "#212842", opacity: 0.6 }}
-          axisLine={{ stroke: "rgba(33,40,66,0.18)" }}
+          tick={{ fontSize: 12, fill: "var(--ink)", opacity: 0.6 }}
+          axisLine={{ stroke: "var(--border-soft)" }}
           tickLine={false}
         />
         <YAxis
-          tick={{ fontSize: 11, fill: "#212842", opacity: 0.55 }}
+          tick={{ fontSize: 11, fill: "var(--ink)", opacity: 0.55 }}
           axisLine={false}
           tickLine={false}
           tickFormatter={(v) => `$${Math.round(v / 1000)}k`}
         />
         <Tooltip
           contentStyle={{
-            background: "#212842",
-            border: "none",
+            background: "var(--bg-card)",
+            border: "1px solid var(--border-soft)",
             borderRadius: 8,
-            color: "#f7faff",
+            color: "var(--ink)",
             fontSize: 12,
+            boxShadow: "0 4px 12px rgba(0,0,0,0.15)"
           }}
-          labelStyle={{ color: "#9eccfa" }}
+          labelStyle={{ color: "var(--ink)", fontWeight: 600, fontFamily: "Playfair Display, serif" }}
           formatter={(value) => [`$${value.toLocaleString()}`, "Expense"]}
         />
         <Line
           type="monotone"
           dataKey="expense"
-          stroke="#212842"
+          stroke="var(--chart-1)"
           strokeWidth={2.4}
-          dot={{ r: 3.5, fill: "#212842" }}
+          dot={{ r: 3.5, fill: "var(--chart-1)" }}
           activeDot={{ r: 5 }}
         />
       </LineChart>

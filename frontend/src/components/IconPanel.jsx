@@ -1,5 +1,6 @@
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { HomeIcon, AboutIcon, LoginIcon, DashboardIcon, ChatbotIcon } from "./Icons";
+import { HomeIcon, AboutIcon, LoginIcon, DashboardIcon, ChatbotIcon, SunIcon, MoonIcon } from "./Icons";
 
 /* =====================================================
    ICON PANEL
@@ -11,16 +12,47 @@ import { HomeIcon, AboutIcon, LoginIcon, DashboardIcon, ChatbotIcon } from "./Ic
    - footer: copyright line
    ===================================================== */
 function IconPanel() {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    // Check initial state
+    if (document.documentElement.classList.contains("dark")) {
+      setIsDark(true);
+    }
+  }, []);
+
+  const toggleDark = () => {
+    const next = !isDark;
+    setIsDark(next);
+    if (next) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  };
+
   const navClass = ({ isActive }) => (isActive ? "active" : "");
 
   return (
     <>
+      {/* ---------- MOBILE TOP HEADER ---------- */}
+      <header className="mobile-top-header">
+        <NavLink to="/">
+          <img src="/monkey-logo.png" alt="finshyt logo" />
+          <span>finshyt</span>
+        </NavLink>
+      </header>
+
       {/* ---------- DESKTOP SIDEBAR ---------- */}
       <aside className="icon-panel">
-        <div className="panel-brand">
-          <div className="panel-brand-mark">F</div>
-          <span className="panel-brand-name">finance advisor</span>
-        </div>
+        <NavLink to="/" className="panel-brand">
+          <img
+            src="/monkey-logo.png"
+            alt="finshyt logo"
+            style={{ width: "36px", height: "36px", borderRadius: "6px", objectFit: "cover" }}
+          />
+          <span className="panel-brand-name">finshyt</span>
+        </NavLink>
 
         <nav className="panel-nav">
           <NavLink to="/" end className={navClass}>
@@ -41,15 +73,18 @@ function IconPanel() {
 
         <div className="panel-bottom">
           <div className="panel-bottom-actions">
+            <button onClick={toggleDark} className="info-btn" aria-label="Toggle dark mode" title="Toggle dark mode" style={{ cursor: "pointer", background: "transparent" }}>
+              {isDark ? <SunIcon width={16} height={16} /> : <MoonIcon width={16} height={16} />}
+            </button>
             <NavLink to="/about" className="info-btn" aria-label="About us" title="About us">
               <AboutIcon width={16} height={16} />
             </NavLink>
-            <NavLink to="/login" className="btn btn-sm btn-block panel-login-btn">
+            <NavLink to="/login" className="btn btn-sm btn-block panel-login-btn" style={{ borderRadius: 0 }}>
               <LoginIcon width={15} height={15} />
               <span>login</span>
             </NavLink>
           </div>
-          <div className="panel-copyright">© 2026 Finance Advisor. All rights reserved.</div>
+          <div className="panel-copyright">© 2026 finshyt. All rights reserved.</div>
         </div>
       </aside>
 

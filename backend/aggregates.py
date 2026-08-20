@@ -6,12 +6,32 @@ Adapted to the team's actual data schema:
   budget.csv:   department, category, month ("January 2025"), budgeted_amount
 """
 
+import os
 import datetime
 import pandas as pd
 
+try:
+    import psycopg2
+    HAVE_PSYCOPG2 = True
+except ImportError:
+    HAVE_PSYCOPG2 = False
+
 
 def load_expenses(path="../data2/expenses.csv"):
-    df = pd.read_csv(path, parse_dates=["date"])
+    db_url = os.environ.get("DATABASE_URL")
+    if db_url and HAVE_PSYCOPG2:
+        try:
+            conn = psycopg2.connect(db_url)
+            # The app expects company_id = 1 for the single-tenant demo
+            query = "SELECT * FROM expenses WHERE company_id = 1;"
+            df = pd.read_sql_query(query, conn, parse_dates=["date"])
+            conn.close()
+        except Exception as e:
+            print(f"Error loading expenses from DB: {e}. Falling back to CSV.")
+            df = pd.read_csv(path, parse_dates=["date"])
+    else:
+        df = pd.read_csv(path, parse_dates=["date"])
+        
     df["month"] = df["date"].dt.to_period("M").astype(str)
     df["amount"] = pd.to_numeric(df["amount"], errors="coerce")
     df = df.dropna(subset=["amount", "date"])
@@ -24,9 +44,30 @@ def _parse_month_name(s):
 
 
 def load_budgets(path="../data2/budget.csv"):
-    df = pd.read_csv(path)
-    df["month"] = df["month"].apply(_parse_month_name)
-    df = df.rename(columns={"budgeted_amount": "amount"})
+    db_url = os.environ.get("DATABASE_URL")
+    if db_url and HAVE_PSYCOPG2:
+        try:
+            conn = psycopg2.connect(db_url)
+            query = "SELECT * FROM budgets WHERE company_id = 1;"
+            df = pd.read_sql_query(query, conn)
+            conn.close()
+            # If reading from DB, the column is already named correctly in some cases,
+            # but wait, the DB schema has 'budgeted_amount'
+            if "budgeted_amount" in df.columns:
+                df = df.rename(columns={"budgeted_amount": "amount"})
+            # Ensure month is correctly formatted YYYY-MM
+            # The DB stores it as YYYY-MM natively, but we apply _parse_month_name defensively
+            df["month"] = df["month"].apply(lambda m: m if "-" in str(m) else _parse_month_name(m))
+        except Exception as e:
+            print(f"Error loading budgets from DB: {e}. Falling back to CSV.")
+            df = pd.read_csv(path)
+            df["month"] = df["month"].apply(_parse_month_name)
+            df = df.rename(columns={"budgeted_amount": "amount"})
+    else:
+        df = pd.read_csv(path)
+        df["month"] = df["month"].apply(_parse_month_name)
+        df = df.rename(columns={"budgeted_amount": "amount"})
+        
     df["amount"] = pd.to_numeric(df["amount"], errors="coerce")
     return df.dropna(subset=["amount"])
 

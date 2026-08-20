@@ -23,6 +23,7 @@ import re
 import requests
 from dotenv import load_dotenv
 from groq import Groq
+from typing import Optional
 
 # Load .env here too (not just in main.py) so this module works whether
 # it's imported by the FastAPI app or run/imported standalone (e.g. by
@@ -33,7 +34,8 @@ load_dotenv()
 INTEL_BASE_URL = os.environ.get("INTEL_BASE_URL", "http://localhost:8000/api/intel")
 SUMMARY_API_URL = os.environ.get("SUMMARY_API_URL", f"{INTEL_BASE_URL}/summary")
 
-client = Groq(api_key=os.environ["GROQ_API_KEY"])
+api_key = os.environ.get("GROQ_API_KEY", "dummy_key")
+client = Groq(api_key=api_key)
 MODEL = "openai/gpt-oss-120b"  # swap freely; check console.groq.com/docs/models for current options
 
 MONTH_NAME_TO_NUM = {
@@ -51,8 +53,8 @@ def load_summary_pack() -> dict:
         resp.raise_for_status()
         return resp.json()
     except requests.RequestException as e:
-        print(f"[warn] couldn't reach {SUMMARY_API_URL} ({e}), falling back to local summary_pack.json")
-        with open("summary_pack.json") as f:
+        print(f"[warn] couldn't reach {SUMMARY_API_URL} ({e}), falling back to local summary.json")
+        with open("summary.json") as f:
             return json.load(f)
 
 
@@ -67,7 +69,7 @@ def _safe_get(url: str):
         return None
 
 
-def extract_month_from_question(question: str) -> str | None:
+def extract_month_from_question(question: str) -> Optional[str]:
     """Finds an explicit month reference like 'February 2025' or '2025-02'
     in the question and returns it as 'YYYY-MM', or None if none found."""
     m = re.search(r"\b(20\d{2})-(0[1-9]|1[0-2])\b", question)
@@ -221,7 +223,7 @@ def _find_percentage(question: str):
     return float(m.group(1)) if m else None
 
 
-def compute_whatif(question: str, summary_pack: dict) -> dict | None:
+def compute_whatif(question: str, summary_pack: dict) -> Optional[dict]:
     """Returns a structured arithmetic result, or None if we can't
     confidently parse the question — caller should fall back to refusal."""
     kind, target = _find_category_or_vendor(question, summary_pack)

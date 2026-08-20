@@ -1,6 +1,6 @@
 /* =====================================================
    MOCK DATA
-   Placeholder numbers only — for laying out the UI.
+   Placeholder numbers only - for laying out the UI.
    Replace with real API responses once the backend
    (upload → categorize → analyze) is wired in.
    ===================================================== */
