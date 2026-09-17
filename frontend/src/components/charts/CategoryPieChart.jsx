@@ -1,7 +1,7 @@
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend } from "recharts";
 
 const CustomLegend = (props) => {
-  const { payload } = props;
+  const { payload = [] } = props;
   return (
     <div style={{ 
       display: "grid", 
@@ -28,7 +28,7 @@ const CustomLegend = (props) => {
   );
 };
 
-function CategoryPieChart({ data }) {
+function CategoryPieChart({ data = [] }) {
   return (
     <ResponsiveContainer width="100%" height={260}>
       <PieChart>

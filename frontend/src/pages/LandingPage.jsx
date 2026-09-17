@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { DashboardIcon, ChatbotIcon, ArrowUpRight } from "../components/Icons";
 
 const steps = [
   { id: "UPLOAD", desc: "A raw CSV or ledger export. That's all the system needs to begin." },
@@ -8,11 +7,11 @@ const steps = [
   { id: "VISUALIZE", desc: "Live, interactive dashboards appear immediately, exposing hidden trends." },
   { id: "ACT", desc: "Get specific, ruthless guidance from the AI advisor on where to cut." },
 ];
+
 function LandingPage() {
   const [hoveredStep, setHoveredStep] = useState(null);
   return (
     <div style={{ position: "relative", padding: 0 }}>
-
       {/* ---------- HERO ---------- */}
       <section style={{
         minHeight: "65vh",
@@ -129,9 +128,6 @@ function LandingPage() {
             : "Hover a phase to inspect."}
         </div>
       </section>
-
-
-
     </div>
   );
 }

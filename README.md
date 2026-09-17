@@ -31,8 +31,8 @@ A highly stylized, brutalist-inspired financial co-pilot application. This repos
    - Replace the `mockData.js` imports in the Dashboard charts with `fetch` calls to the live Python analytics endpoints.
 2. **Implement Authentication:**
    - The current login button is a React state stub (`isAuthenticated = true`). This needs to be wired up to actual JWT/Session-based authentication so the backend can scope data by `company_id`.
-3. **Ledger Upload Logic:**
-   - The `UploadPanel.jsx` is visually complete but needs to be hooked up to a backend endpoint to parse CSV/Excel files and ingest the startup's financial data into the database.
+3. **Ledger storage upgrade:**
+   - CSV/XLSX expense and budget uploads now have server-side preview, validation, duplicate handling, and explicit confirmation. The demo persists confirmed records to the CSV ledger; replace this adapter with the planned Postgres writer before production.
 4. **Deploy:**
    - Setup Dockerfiles or deployment scripts for both the Vite React frontend and the FastAPI Python backend.
 
@@ -202,5 +202,15 @@ uvicorn main:app --reload --port 8000
 python3 run_eval.py
 ```
 Full output also saves to `eval_results.txt`.
+
+### Importing data
+
+The `/upload` page accepts CSV, XLSX, and XLS expense or budget files. It
+infers common headers (for example `Transaction Date`, `Memo`, and `Team`),
+shows validation errors and duplicates before saving, and only writes after
+**Confirm import**. Expense files require date, amount, and description;
+budget files require department, month/period, and budgeted amount. Confirmed
+imports update `data2/expenses.csv` or `data2/budget.csv`, which the dashboard
+and intelligence endpoints read immediately.
 
 **Run both halves together:** backend on `localhost:8000`, frontend on `localhost:5173` (Vite's default, confirmed in `vite.config.js`) — CORS is already configured for that port in `main.py`.

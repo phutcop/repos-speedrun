@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 
 const DATA_TOKENS = ["finshyt", "independent", "intelligence", "ledger", "truth", "+", "-", "•", "abstract"];
 
 function DataRain() {
-  const [raindrops, setRaindrops] = useState([]);
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    // Generate 30 falling data tokens for a sleek, minimal effect
-    const drops = Array.from({ length: 30 }).map((_, i) => ({
+  const [raindrops] = useState(() => 
+    Array.from({ length: 30 }).map((_, i) => ({
       id: i,
       text: DATA_TOKENS[Math.floor(Math.random() * DATA_TOKENS.length)],
       left: Math.random() * 100, // percentage from left
@@ -16,9 +12,8 @@ function DataRain() {
       animationDelay: Math.random() * 3, // 0s to 3s delay
       scale: 0.5 + Math.random() * 0.4, // size variation
       opacity: 0.02 + Math.random() * 0.05, // highly translucent, almost invisible watermark
-    }));
-    setRaindrops(drops);
-  }, []);
+    }))
+  );
 
   return (
     <div className="data-rain-container" aria-hidden="true">

@@ -14,7 +14,7 @@ except ImportError:
 COMPANY_NAME = "Demo Startup Inc."
 START_DATE = datetime.date(2024, 1, 1)
 MONTHS = 24
-OUTPUT_FILE = "database/seed.sql"
+OUTPUT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "seed.sql")
 
 DEPARTMENTS = ["Engineering", "Sales", "Marketing", "Operations", "Executive"]
 CATEGORIES = ["Salaries", "Cloud Services", "Software Subscriptions", "Travel", "Advertising", "Office Supplies", "Legal"]

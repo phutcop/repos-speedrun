@@ -54,7 +54,10 @@ def load_summary_pack() -> dict:
         return resp.json()
     except requests.RequestException as e:
         print(f"[warn] couldn't reach {SUMMARY_API_URL} ({e}), falling back to local summary.json")
-        with open("summary.json") as f:
+        summary_path = os.path.join(os.path.dirname(__file__), "summary.json")
+        if not os.path.exists(summary_path):
+            summary_path = "summary.json"
+        with open(summary_path) as f:
             return json.load(f)
 
 

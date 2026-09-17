@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 function LoginPage({ onLogin }) {
   return (
     <div style={{
@@ -49,6 +47,7 @@ function LoginPage({ onLogin }) {
           }}>Email</label>
           <input
             type="email"
+            placeholder="you@company.com"
             style={{
               width: "100%",
               padding: "0.85rem 1rem",
@@ -77,6 +76,7 @@ function LoginPage({ onLogin }) {
           </div>
           <input
             type="password"
+            placeholder="••••••••"
             style={{
               width: "100%",
               padding: "0.85rem 1rem",

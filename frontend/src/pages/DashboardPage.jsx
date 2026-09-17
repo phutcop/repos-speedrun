@@ -1,10 +1,15 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import SummaryCard from "../components/SummaryCard";
-import UploadPanel from "../components/UploadPanel";
 import ExpenseTrendChart from "../components/charts/ExpenseTrendChart";
 import CategoryPieChart from "../components/charts/CategoryPieChart";
 import DepartmentBarChart from "../components/charts/DepartmentBarChart";
 import { DownloadIcon } from "../components/Icons";
+import { 
+  timeVsExpense as mockTrend, 
+  categoryDistribution as mockCategories, 
+  departmentSpend as mockDepartments 
+} from "../data/mockData";
 
 const COLORS = ["var(--chart-1)", "var(--chart-2)", "var(--chart-3)", "var(--chart-4)", "var(--chart-5)", "var(--chart-6)"];
 
@@ -22,6 +27,10 @@ function DashboardPage() {
           fetch("http://localhost:8000/api/intel/categories")
         ]);
 
+        if (!sumRes.ok || !trendRes.ok || !deptRes.ok || !catRes.ok) {
+          throw new Error("One or more API endpoints returned non-OK status");
+        }
+
         const summary = await sumRes.json();
         const trend = await trendRes.json();
         const dept = await deptRes.json();
@@ -29,16 +38,26 @@ function DashboardPage() {
 
         setSummaryData({
           summary,
-          trend: trend.data.map(d => ({ month: d.month, expense: d.total })),
-          departments: dept.data.map(d => ({ department: d.department, spend: d.total })),
-          categories: cat.data.map((d, i) => ({ 
+          trend: trend?.data?.map(d => ({ month: d.month, expense: d.total })) || [],
+          departments: dept?.data?.map(d => ({ department: d.department, spend: d.total })) || [],
+          categories: cat?.data?.map((d, i) => ({ 
             name: d.category, 
             value: d.total, 
             color: COLORS[i % COLORS.length] 
-          }))
+          })) || []
         });
       } catch (err) {
-        console.error("Failed to fetch dashboard data:", err);
+        console.warn("Backend unavailable; using mock dashboard data fallback:", err);
+        setSummaryData({
+          summary: {
+            total_spend: 118400,
+            change_pct: 4.2,
+            departments: mockDepartments.map(d => d.department)
+          },
+          trend: mockTrend,
+          departments: mockDepartments,
+          categories: mockCategories
+        });
       } finally {
         setLoading(false);
       }
@@ -110,7 +129,7 @@ function DashboardPage() {
               <div className="card-label" style={{ marginBottom: "1rem", textTransform: "uppercase" }}>
                 Update Ledger
               </div>
-              <UploadPanel />
+              <Link to="/upload" className="btn btn-sm btn-solid">Import expenses or budget</Link>
             </div>
             
             <div style={{ 
@@ -130,7 +149,7 @@ function DashboardPage() {
                   Your marketing spend spiked 12% in Q3. Should we run a vendor audit?
                 </div>
               </div>
-              <a href="/advisor" style={{ 
+              <Link to="/advisor" style={{ 
                 color: "var(--bg-main)", 
                 fontFamily: "var(--font-display)", 
                 fontSize: "0.9rem", 
@@ -139,7 +158,7 @@ function DashboardPage() {
                 display: "inline-block"
               }}>
                 Ask Advisor →
-              </a>
+              </Link>
             </div>
           </div>
 
