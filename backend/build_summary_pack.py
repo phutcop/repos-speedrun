@@ -16,7 +16,11 @@ Produces: summary_pack.json
 import csv
 import datetime
 import json
+import os
 from collections import defaultdict
+
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_DATA2 = os.path.join(_HERE, "..", "data2")
 
 
 def parse_month_name(s: str) -> str:
@@ -24,12 +28,16 @@ def parse_month_name(s: str) -> str:
     return datetime.datetime.strptime(s, "%B %Y").strftime("%Y-%m")
 
 
-def load_expenses(path="expenses.csv"):
+def load_expenses(path=None):
+    if path is None:
+        path = os.path.join(_DATA2, "expenses.csv")
     with open(path) as f:
         return list(csv.DictReader(f))
 
 
-def load_budget(path="budget.csv"):
+def load_budget(path=None):
+    if path is None:
+        path = os.path.join(_DATA2, "budget.csv")
     with open(path) as f:
         return list(csv.DictReader(f))
 
@@ -116,9 +124,10 @@ def build_summary_pack():
 
 if __name__ == "__main__":
     pack = build_summary_pack()
-    with open("summary_pack.json", "w") as f:
+    out_path = os.path.join(_HERE, "summary_pack.json")
+    with open(out_path, "w") as f:
         json.dump(pack, f, indent=2)
-    print("Wrote summary_pack.json")
+    print(f"Wrote {out_path}")
     print(f"Months: {pack['months'][0]} to {pack['months'][-1]}")
     print(f"Departments: {pack['departments']}")
     print(f"Categories: {len(pack['categories'])}")

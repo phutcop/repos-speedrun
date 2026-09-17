@@ -17,7 +17,23 @@ except ImportError:
     HAVE_PSYCOPG2 = False
 
 
-def load_expenses(path="../data2/expenses.csv"):
+def _resolve_data_path(filename):
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    candidate1 = os.path.join(script_dir, "..", "data2", filename)
+    if os.path.exists(candidate1):
+        return candidate1
+    candidate2 = os.path.join("data2", filename)
+    if os.path.exists(candidate2):
+        return candidate2
+    candidate3 = os.path.join("..", "data2", filename)
+    if os.path.exists(candidate3):
+        return candidate3
+    return candidate1
+
+
+def load_expenses(path=None):
+    if path is None:
+        path = _resolve_data_path("expenses.csv")
     db_url = os.environ.get("DATABASE_URL")
     if db_url and HAVE_PSYCOPG2:
         try:
@@ -43,7 +59,9 @@ def _parse_month_name(s):
     return datetime.datetime.strptime(s.strip(), "%B %Y").strftime("%Y-%m")
 
 
-def load_budgets(path="../data2/budget.csv"):
+def load_budgets(path=None):
+    if path is None:
+        path = _resolve_data_path("budget.csv")
     db_url = os.environ.get("DATABASE_URL")
     if db_url and HAVE_PSYCOPG2:
         try:

@@ -32,11 +32,20 @@ names once you confirm them against Role 1's actual schema.
 import os
 import re
 
-import psycopg2
-import psycopg2.extras
+from dotenv import load_dotenv
+load_dotenv()
+
+try:
+    import psycopg2
+    import psycopg2.extras
+    HAVE_PSYCOPG2 = True
+except ImportError:
+    HAVE_PSYCOPG2 = False
+
 from groq import Groq
 
-client = Groq(api_key=os.environ["GROQ_API_KEY"])
+api_key = os.environ.get("GROQ_API_KEY", "dummy_key")
+client = Groq(api_key=api_key)
 MODEL = "openai/gpt-oss-120b"
 
 # The read-only connection string for the AI service's DB role.
@@ -148,6 +157,8 @@ def validate_sql(sql: str) -> None:
 def execute_sql(sql: str, company_id: int, max_rows: int = 200):
     if not DATABASE_URL:
         raise RuntimeError("DATABASE_URL is not set — can't run v1 queries yet")
+    if not HAVE_PSYCOPG2:
+        raise RuntimeError("psycopg2 is not installed — can't execute SQL queries")
 
     conn = psycopg2.connect(DATABASE_URL)
     try:

@@ -1,25 +1,15 @@
-<<<<<<< HEAD
-=======
-import React, { useState, useEffect } from "react";
->>>>>>> main
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import SummaryCard from "../components/SummaryCard";
-import UploadPanel from "../components/UploadPanel";
 import ExpenseTrendChart from "../components/charts/ExpenseTrendChart";
 import CategoryPieChart from "../components/charts/CategoryPieChart";
 import DepartmentBarChart from "../components/charts/DepartmentBarChart";
 import { DownloadIcon } from "../components/Icons";
-<<<<<<< HEAD
-import { summaryCards, timeVsExpense, categoryDistribution, departmentSpend } from "../data/mockData";
-
-function DashboardPage() {
-  return (
-    <div className="page">
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "2rem" }}>
-        <div>
-          <span className="eyebrow">overview</span>
-          <h1 className="display-title" style={{ fontSize: "2.1rem" }}>
-            Your Finance Dashboard
-=======
+import { 
+  timeVsExpense as mockTrend, 
+  categoryDistribution as mockCategories, 
+  departmentSpend as mockDepartments 
+} from "../data/mockData";
 
 const COLORS = ["var(--chart-1)", "var(--chart-2)", "var(--chart-3)", "var(--chart-4)", "var(--chart-5)", "var(--chart-6)"];
 
@@ -37,6 +27,10 @@ function DashboardPage() {
           fetch("http://localhost:8000/api/intel/categories")
         ]);
 
+        if (!sumRes.ok || !trendRes.ok || !deptRes.ok || !catRes.ok) {
+          throw new Error("One or more API endpoints returned non-OK status");
+        }
+
         const summary = await sumRes.json();
         const trend = await trendRes.json();
         const dept = await deptRes.json();
@@ -44,16 +38,26 @@ function DashboardPage() {
 
         setSummaryData({
           summary,
-          trend: trend.data.map(d => ({ month: d.month, expense: d.total })),
-          departments: dept.data.map(d => ({ department: d.department, spend: d.total })),
-          categories: cat.data.map((d, i) => ({ 
+          trend: trend?.data?.map(d => ({ month: d.month, expense: d.total })) || [],
+          departments: dept?.data?.map(d => ({ department: d.department, spend: d.total })) || [],
+          categories: cat?.data?.map((d, i) => ({ 
             name: d.category, 
             value: d.total, 
             color: COLORS[i % COLORS.length] 
-          }))
+          })) || []
         });
       } catch (err) {
-        console.error("Failed to fetch dashboard data:", err);
+        console.warn("Backend unavailable; using mock dashboard data fallback:", err);
+        setSummaryData({
+          summary: {
+            total_spend: 118400,
+            change_pct: 4.2,
+            departments: mockDepartments.map(d => d.department)
+          },
+          trend: mockTrend,
+          departments: mockDepartments,
+          categories: mockCategories
+        });
       } finally {
         setLoading(false);
       }
@@ -90,7 +94,6 @@ function DashboardPage() {
         <div>
           <h1 className="display-title" style={{ fontSize: "3.5rem" }}>
             The Ledger.
->>>>>>> main
           </h1>
         </div>
       </div>
@@ -98,17 +101,6 @@ function DashboardPage() {
       <div className="dashboard-grid">
         {/* ---------- LEFT COLUMN ---------- */}
         <div className="dashboard-col-left">
-<<<<<<< HEAD
-          {summaryCards.map((card) => (
-            <SummaryCard key={card.id} {...card} />
-          ))}
-
-          <div className="panel-card" style={{ flex: 1 }}>
-            <div className="card-label" style={{ marginBottom: "1rem" }}>
-              Visualization — 01 · department spend
-            </div>
-            <DepartmentBarChart data={departmentSpend} />
-=======
           {dynamicSummaryCards.map((card) => (
             <SummaryCard key={card.id} {...card} />
           ))}
@@ -120,30 +112,11 @@ function DashboardPage() {
             <div style={{ flex: 1, minHeight: 260, overflowY: "auto", overflowX: "hidden" }}>
               <DepartmentBarChart data={departments} />
             </div>
->>>>>>> main
           </div>
         </div>
 
         {/* ---------- RIGHT COLUMN ---------- */}
         <div className="dashboard-col-right">
-<<<<<<< HEAD
-          <div className="panel-card">
-            <div className="card-label" style={{ marginBottom: "0.4rem" }}>
-              Time vs Expense
-            </div>
-            <ExpenseTrendChart data={timeVsExpense} />
-          </div>
-
-          <div className="panel-card">
-            <UploadPanel />
-          </div>
-
-          <div className="panel-card">
-            <div className="card-label" style={{ marginBottom: "0.4rem" }}>
-              Distribution
-            </div>
-            <CategoryPieChart data={categoryDistribution} />
-=======
           <div style={{ border: "1px solid var(--ink)", padding: "2rem" }}>
             <div className="card-label" style={{ marginBottom: "0.4rem", textTransform: "uppercase" }}>
               Time vs Expense
@@ -156,7 +129,7 @@ function DashboardPage() {
               <div className="card-label" style={{ marginBottom: "1rem", textTransform: "uppercase" }}>
                 Update Ledger
               </div>
-              <UploadPanel />
+              <Link to="/upload" className="btn btn-sm btn-solid">Import expenses or budget</Link>
             </div>
             
             <div style={{ 
@@ -176,7 +149,7 @@ function DashboardPage() {
                   Your marketing spend spiked 12% in Q3. Should we run a vendor audit?
                 </div>
               </div>
-              <a href="/advisor" style={{ 
+              <Link to="/advisor" style={{ 
                 color: "var(--bg-main)", 
                 fontFamily: "var(--font-display)", 
                 fontSize: "0.9rem", 
@@ -185,7 +158,7 @@ function DashboardPage() {
                 display: "inline-block"
               }}>
                 Ask Advisor →
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -194,23 +167,16 @@ function DashboardPage() {
               Distribution
             </div>
             <CategoryPieChart data={categories} />
->>>>>>> main
           </div>
         </div>
       </div>
 
       {/* ---------- FOOTER ACTION BAR ---------- */}
       <div
-<<<<<<< HEAD
-        className="panel-card panel-card-alt"
-        style={{
-          marginTop: "1.6rem",
-=======
         style={{
           marginTop: "3rem",
           paddingTop: "2rem",
           borderTop: "1px solid var(--ink)",
->>>>>>> main
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -231,18 +197,12 @@ function DashboardPage() {
       <style>{`
         .dashboard-grid {
           display: grid;
-<<<<<<< HEAD
-          grid-template-columns: 320px 1fr;
-          gap: 1.4rem;
-          align-items: stretch;
-=======
           grid-template-columns: 320px minmax(0, 1fr);
           gap: 2rem;
           margin-bottom: 2rem;
         }
         .dashboard-grid > div {
           min-width: 0;
->>>>>>> main
         }
         .dashboard-col-left,
         .dashboard-col-right {

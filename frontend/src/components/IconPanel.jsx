@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { HomeIcon, AboutIcon, LoginIcon, DashboardIcon, ChatbotIcon, SunIcon, MoonIcon } from "./Icons";
 
@@ -11,15 +11,10 @@ import { HomeIcon, AboutIcon, LoginIcon, DashboardIcon, ChatbotIcon, SunIcon, Mo
    - bottom-docked: info button (About Us) + Login
    - footer: copyright line
    ===================================================== */
-function IconPanel() {
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    // Check initial state
-    if (document.documentElement.classList.contains("dark")) {
-      setIsDark(true);
-    }
-  }, []);
+function IconPanel({ isAuthenticated = false, onLogout }) {
+  const [isDark, setIsDark] = useState(() => {
+    return typeof document !== "undefined" && document.documentElement.classList.contains("dark");
+  });
 
   const toggleDark = () => {
     const next = !isDark;
@@ -79,10 +74,23 @@ function IconPanel() {
             <NavLink to="/about" className="info-btn" aria-label="About us" title="About us">
               <AboutIcon width={16} height={16} />
             </NavLink>
-            <NavLink to="/login" className="btn btn-sm btn-block panel-login-btn" style={{ borderRadius: 0 }}>
-              <LoginIcon width={15} height={15} />
-              <span>login</span>
-            </NavLink>
+            {isAuthenticated ? (
+              <button
+                type="button"
+                onClick={onLogout}
+                className="btn btn-sm btn-block panel-login-btn"
+                style={{ borderRadius: 0, cursor: "pointer" }}
+                aria-label="Logout"
+              >
+                <LoginIcon width={15} height={15} />
+                <span>logout</span>
+              </button>
+            ) : (
+              <NavLink to="/login" className="btn btn-sm btn-block panel-login-btn" style={{ borderRadius: 0 }}>
+                <LoginIcon width={15} height={15} />
+                <span>login</span>
+              </NavLink>
+            )}
           </div>
           <div className="panel-copyright">© 2026 finshyt. All rights reserved.</div>
         </div>
@@ -102,9 +110,20 @@ function IconPanel() {
         <NavLink to="/about" className={navClass} aria-label="About us">
           <AboutIcon width={20} height={20} />
         </NavLink>
-        <NavLink to="/login" className={navClass} aria-label="Login">
-          <LoginIcon width={20} height={20} />
-        </NavLink>
+        {isAuthenticated ? (
+          <button
+            type="button"
+            onClick={onLogout}
+            aria-label="Logout"
+            style={{ background: "transparent", border: "none", color: "inherit", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}
+          >
+            <LoginIcon width={20} height={20} />
+          </button>
+        ) : (
+          <NavLink to="/login" className={navClass} aria-label="Login">
+            <LoginIcon width={20} height={20} />
+          </NavLink>
+        )}
       </nav>
     </>
   );

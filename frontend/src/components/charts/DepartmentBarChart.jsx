@@ -2,9 +2,9 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGri
 
 const BAR_COLORS = ["#212842", "#3f5b8a", "#6c86b8", "#9eccfa", "#c9def5", "#e4edfa"];
 
-function DepartmentBarChart({ data }) {
+function DepartmentBarChart({ data = [] }) {
   // Dynamically calculate height so bars don't squish if there are many departments
-  const chartHeight = Math.max(260, data.length * 45);
+  const chartHeight = Math.max(260, (data?.length || 0) * 45);
 
   return (
     <ResponsiveContainer width="100%" height={chartHeight}>

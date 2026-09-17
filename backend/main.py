@@ -24,9 +24,11 @@ from pydantic import BaseModel
 
 from chat import answer_question
 from intelligence import router as intel_router
+from imports import router as imports_router
 
 app = FastAPI(title="Finance Chatbot API")
 app.include_router(intel_router)
+app.include_router(imports_router)
 
 # Allow the React dev server to call this during local development.
 # Tighten allow_origins before deploying.
